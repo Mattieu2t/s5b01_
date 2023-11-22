@@ -15,10 +15,10 @@ Les comptes-rendus doivent être stockés dans `projet/` sous la forme
 `cr-AAAA-MM-JJ-label.md` avec `AAAA-MM-JJ` la date de la réunion et
 `label` un identifiant du compte-rendu (genre `bilan-hebdo`).
 
-Les suivis d'avancement continu par participants doivent être stockés
-dans `projet/` sous la forme `cr-LOGIN.md` avec `LOGIN` remplacé par
-un identifiant du participant (par exemple son login). Il doit être
-mis à jour au minimum une fois par jour de travail.
+Les suivis d'avancement par participants doivent être stockés dans
+`projet/` sous la forme `cr-LOGIN.md` avec `LOGIN` remplacé par un
+identifiant du participant (par exemple son login). Il doit être mis à
+jour au minimum une fois par jour de travail.
 
 Les éventuels supports de présentations des travaux ou rapport de fin
 de projet doivent être stockés dans `projet/` sous la forme
@@ -29,7 +29,7 @@ présentation (genre `soutenance-but3`).
 ### `doc/`
 
 Les documentations et procédures produites par les participants dans
-le cadre du projet doivent être stockés dans `doc/`. Ceux récupérés
+le cadre du projet doivent être stockés dans `doc/`. Celles récupérées
 (*i.e* non produites explicitement par les participants du projet)
 doivent être stockés dans `ext/`.
 
@@ -68,7 +68,7 @@ Pour les documentations on essaie de se limiter à utiliser le format
 ou celui de [Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdown)
 (on utilise, par convention, le suffixe `.md` pour le nom du fichier)
 et éventuellement le format [Org](https://orgmode.org) (on utilise,
-par convention, le suffixe `.org` pour le nom du fichier)..
+par convention, le suffixe `.org` pour le nom du fichier).
 
 Les fichiers texte sont encodés en **UTF-8** et rien d'autre (pas
 d'UTF-16 *à la* Mac OS ou Windows-1252 *à la* Windows) avec la

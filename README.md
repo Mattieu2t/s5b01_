@@ -1,6 +1,10 @@
-# SAÉ 5B.01 - Évolution d'une infrastructure
+---
+title: SAÉ 5B.01
+subtitle: Évolution d'une infrastructure
+date: 2023/2024
+---
 
-## Sujet
+# Sujet
 
 L’objet de la SAÉ (Situation d'Apprentissage et d'Évaluation) 5B.01
 est de permettre de mettre en œuvre la plupart des compétences
@@ -12,9 +16,9 @@ d’entreprise pour 4 organisations différentes dont une aura le rôle de
 Fournisseur d'Accès à l'Internet (FAI) pour les 3 autres. Chaque
 organisation sera gérée par un groupe d'étudiants.
 
-## Logistique
+# Logistique
 
-### Séances
+## Séances
 
 Les séances ont lieu lors des semaines où les étudiants alternants
 sont en entreprise.
@@ -30,7 +34,7 @@ Pour l'année 2023-2024 cela correspond à
 Pendant vos séances de TP, une salle de TP classique ainsi que la
 salle de TP réseau sont à votre disposition.
 
-### Salle de TP réseau
+## Salle de TP réseau
 
 Chaque groupe a la responsabilité d'un poste de travail.
 
@@ -41,7 +45,7 @@ Chaque machine a 2 cartes réseaux physiques :
 
 - une carte réseau connectée sur le réseau privé des salles de TP :
   `172.18.48.0/22`. Cette carte est configurée au démarrage de la
-  machine par le DHCP du département est sa configuration **ne doit pas
+  machine par le DHCP du département. **Sa configuration ne doit pas
   être modifiée**.
 - une carte supplémentaire connectée directement à la baie réseeau
   (soit via le patch du bas de la baie soit via des cables posés à
@@ -61,21 +65,21 @@ Chaque baie réseau est équipée du haut vers le bas par :
 - 4 commutateurs (`S1`, `S2`, `S3`, `S4`)
 - un patch de brassage vers les machines de travail
 
-### Gestion du projet
+## Gestion du projet
 
-Le projet est géré en respectant quelques
-[règles](projet-regles.md) et des
-[conventions](projet-conventions.md).
+Le projet est géré en respectant quelques [règles](projet-regles.md)
+et [conventions](projet-conventions.md) et en utilisant des
+[outils](projet-outils.md).
 
 Le respect de celles-ci est **obligatoire** et sera pris en compte
 pour l'évaluation finale.
 
-## Contraintes communes
+# Contraintes communes
 
 Pour chaque organisation l'infrastructure doit correspondre aux
 contraintes spécifiées ici.
 
-### Réseau
+## Réseau
 
 - avoir un réseau comportant 4 parties distinctes :
     - une partie *publique*, i.e. avec des adresses IP accessibles par
@@ -112,7 +116,7 @@ contraintes spécifiées ici.
 - les réseaux privés sont *sécurisés* par un serveur jouant le rôle de
   pare-feu
 
-### Services
+## Services
 
 - le réseau privé du service informatique doit héberger a minima
     - un service DHCP pour toutes les machines privées de l'organisation
@@ -139,7 +143,7 @@ compris d'une organisation à une autre.
 Toutes les ordinateurs et services de l'organisation doivent être
 désignés par un nom.
 
-### Extensions
+## Extensions
 
 Si l’ensemble de ces éléments a pu être mis en œuvre avant la fin du
 projet, on pourra mettre en place les éléments suivants :
@@ -153,7 +157,7 @@ projet, on pourra mettre en place les éléments suivants :
   Le flux correspondant sera séparé des autres flux et permettra
   uniquement le flux HTTP.
 
-## Organisation du travail
+# Organisation du travail
 
 Dans la mesure où certaines des compétences nécessaires seront
 acquises durant le semestre, il faudra adopter une démarche
@@ -173,7 +177,7 @@ mise en œuvre de l’infrastructure commune permettant de relier les
 différentes organisations et est l'interlocuteur unique de
 l'organisation FAI.
 
-## Évaluation
+# Évaluation
 
 Vous devrez produire un document de synthèse et faire une
 démonstration des maquettes. Cette évaluation sera faite lors d'une
@@ -181,15 +185,15 @@ séance début janvier dont la date sera fixée tardivement dans le
 semestre.
 
 
-## Équipes
+# Équipes
 
-### Équipe A : FAI
+## Équipe A : FAI
 
-### Équipe B : 
+## Équipe B :
 
-### Équipe C :
+## Équipe C :
 
-### Équipe D :
+## Équipe D :
 
 
 
