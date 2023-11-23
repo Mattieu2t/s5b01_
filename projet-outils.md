@@ -62,8 +62,8 @@ author: Bruno BEAUFILS
 ## D'autres outils utiles
 
 - [**Org mode**](https://orgmode.org) est un mode
-  [Emacs](https://www.gnu.org/software/emacs/) pour l'édition de
-  documents en texte simple pour :
+  [Emacs](https://www.gnu.org/software/emacs/) d'édition de
+  documents en texte simple pour
     - prendre des notes,
     - gérer des listes de tâches
     - planifier des projets
