@@ -72,9 +72,9 @@ author: Bruno BEAUFILS
     - publier sous divers formats (HTML, PDF, etc.)
 
 - [**Mdoc**](https://manpages.bsd.lv/mdoc.html) est le language
-  utilisé pour l'écriture de pages de manuel UNIX en texte simple
-    - [man(7)](https://manpages.debian.org/man.7.html),
-    - [mdoc(7)](https://manpages.debian.org/mdoc.7.html),
+  d'écriture de pages de manuel UNIX en texte simple
+    - [man(7)](https://manpages.debian.org/man.7.html)
+    - [mdoc(7)](https://manpages.debian.org/mandoc_mdoc.7.html)
     - [groff(7)](https://manpages.debian.org/groff.7.html)
 
 
