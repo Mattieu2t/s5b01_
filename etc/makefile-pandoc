@@ -24,7 +24,7 @@ html: ARGS += -V lang=fr
 html: ARGS += -V linkcolor=blue
 
 slidy: $(FILE)
-slidy: SLIDYLEVEL ?= 2
+slidy: SLIDELEVEL ?= 2
 slidy: ARGS += -t slidy
 slidy: ARGS += -V lang=fr
 slidy: ARGS += -V linkcolor=blue
