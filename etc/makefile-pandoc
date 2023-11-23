@@ -1,0 +1,64 @@
+.PHONY: clean reset
+
+CONFDIR ?= $(realpath $(dir $(MAKEFILE_LIST)))
+
+beamer: $(FILE)
+beamer: TEMPLATE ?= $(CONFDIR)/pandoc-beamer.tex
+beamer: THEME ?= ulille
+beamer: SLIDELEVEL ?= 2
+beamer: ARGS += -t beamer
+beamer: ARGS += --slide-level=$(SLIDELEVEL)
+
+report: $(FILE)
+report: TEMPLATE ?= $(CONFDIR)/pandoc-report.tex
+report: THEME ?= ulille
+report: ARGS += -t latex
+report: ARGS += --top-level-division=chapter
+report: ARGS += -N
+report: ARGS += --toc
+
+html: $(FILE)
+html: THEME ?= bbb
+html: ARGS += -t html
+html: ARGS += -V lang=fr
+html: ARGS += -V linkcolor=blue
+
+slidy: $(FILE)
+slidy: SLIDYLEVEL ?= 2
+slidy: ARGS += -t slidy
+slidy: ARGS += -V lang=fr
+slidy: ARGS += -V linkcolor=blue
+slidy: ARGS += --slide-level=$(SLIDELEVEL)
+
+
+ARGS = --standalone
+ARGS += --highlight-style=tango
+ARGS += $(addprefix --lua-filter=,$(wildcard $(CONFDIR)/pandoc-*.lua))
+
+ARGS_HTML = --embed-resources
+ARGS_HTML += --css $(CONFDIR)/$(THEME).css
+
+ARGS_PDF = --pdf-engine-opt=-shell-escape
+ARGS_PDF += --template=$(TEMPLATE)
+ARGS_PDF += -V theme=$(THEME)
+ifdef THEMEOPTIONS
+ARGS_PDF += -V themeoptions=$(THEMEOPTIONS)
+endif
+
+%.pdf %.tex: %.md $(MAKEFILE_LIST) $(wildcard $(CONFDIR)/*)
+	TEXINPUTS=.//:$(CONFDIR): pandoc $(ARGS) $(ARGS_PDF) $(EXTRAS) -o $@ -- $<
+
+%.html: %.md $(MAKEFILE_LIST) $(wildcard $(CONFDIR)/*)
+	pandoc $(ARGS) $(ARGS_HTML) $(EXTRAS) -o $@ -- $<
+
+%.pdf: %.svg
+	inkscape -d 2400 -o $@ -T $<
+
+clean:
+	-rm -rf *~ _minted*
+
+reset: clean
+	-test -z $(FILE) || rm $(FILE)
+
+debug:
+	@echo $(CONFDIR)
