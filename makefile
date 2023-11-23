@@ -18,7 +18,7 @@ clean:
 	-rm -rf $(shell find . -name "*~" -o -name "_minted*")
 
 reset: clean
-	@$(MAKE) reset
+	@$(CONVERT) reset
 	-rm projet-outils.pdf projet-outils.html
 
 sinclude makefile.$(shell uname -n)
