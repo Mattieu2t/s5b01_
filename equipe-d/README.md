@@ -16,13 +16,22 @@ Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objecti
 
 Voici ci-dessous le schéma de notre infrastructure réseau :
 
-![Alt text](image.png)  
+![Alt text](image.wepb)  
 
 
 
 
 # Notre organisation pour ce projet : 
 Pour cette première semaine, notre équipe a adopté une approche collaborative où chaque membre travaille sur un pied d'égalité. Les décisions sont prises collectivement après concertation. Chacun a une tâche spécifique pour assurer le bon déroulement du projet.
+Voici le role d'intermédiaire pour chaque semaine : 
+
+semaine 39 du 25/09 au 29/09 -> saad
+semaine 41 du 09/10 au 13/10 -> momo
+semaine 46 du 13/11 au 17/11 -> augustin
+semaine 48 du 27/11 au 01/12 -> martin 
+semaine 50 du 11/12 au 15/12
+
+
 
 
 
