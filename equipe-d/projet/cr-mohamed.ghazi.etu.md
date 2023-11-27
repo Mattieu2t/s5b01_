@@ -2,7 +2,7 @@
 
 ## Semaine 41
 
-27/11/23 :
+### 27/11/23 :
 
 1. Lecture du sujet
 2. Organisation du travail et assignation des tâches
