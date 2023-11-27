@@ -7,7 +7,7 @@ subtitle: SYSSKO
 - Baie n°4
 - IP public : 10.14.0.0/16
 - IP privé : 192.168.x.x
-- DNS : c.iut
+- DNS : syssko.iut
 - Connexion à Douglas : cisco@douglasXX.iut-infobio.priv.univ-lille1.fr
 
 # Organisation d’équipe :
