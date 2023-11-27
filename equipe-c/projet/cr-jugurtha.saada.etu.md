@@ -21,6 +21,7 @@ IP réseau : 10.10.10.2/16
 # Semaine 41 :
 
 ## Schématisation sur Packet Tracer
+
 ![image](https://cdn.discordapp.com/attachments/687337171434078244/1178678328044044339/image.png?ex=657704bc&is=65648fbc&hm=75a0d57f8412725760a9d1948603a5759c29e7857e123ed9c527892769dfbae5&)
 
 ## Branchement de la baie
@@ -55,7 +56,6 @@ IP réseau : 10.10.10.2/16
 
 - Pris en compte enfin du vrai sujet
 - Mise en place du Markdown individuel
-
 
 # Semaine 50 :
 
