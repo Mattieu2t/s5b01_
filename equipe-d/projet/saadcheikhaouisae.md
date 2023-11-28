@@ -21,3 +21,4 @@ subtitle: Equipe D - TechTonic
 ## Semaine 48 (27/11 au 01/12)
 
 - Début de la mise en place du DNS avec Bind9.
+- Configuration DHCP avec Vlans + configuration BIND9 + Tests DHCP.
