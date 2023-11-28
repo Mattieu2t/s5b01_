@@ -1,0 +1,21 @@
+$TTL 86400
+@ IN SOA ns.syssko.iut. root.syssko.iut. (
+    2023092001 ; Serial
+    3600       ; Refresh
+    1800       ; Retry
+    604800     ; Expire
+    86400     ; Minimum TTL
+)
+
+@ IN NS ns.syssko.iut.
+@ IN NS ns2.syssko.iut.
+
+10 IN PTR ns.syssko.iut.
+2 IN PTR client.syssko.iut.
+11 IN PTR ns2.syssko.iut.
+5 IN PTR services.syssko.iut.
+6 IN PTR client.syssko.iut.
+7 IN PTR mx1.syssko.iut.
+8 IN PTR mx2.syssko.iut.
+9 IN PTR resolve.syssko.iut.
+

@@ -1,0 +1,62 @@
+Vagrant.configure("2") do |config|
+    config.vm.define "resolve" do |resolve|
+      resolve.vm.box = "debian/bookworm64"
+      resolve.vm.hostname = "resolve"
+
+      resolve.vm.network "private_network", ip: "192.168.60.3"
+      #resolve.vm.network "forwarded_port", guest: 53, host: 5353
+      resolve.vm.provision "file", source: "./bind9config", destination: "/home/vagrant/named.conf.options"
+
+      resolve.vm.provision "shell", inline: <<-SHELL
+       apt-get update
+       apt-get install -y bind9
+       sudo cp /home/vagrant/named.conf.options /etc/bind/named.conf.options
+       sudo systemctl restart bind9
+       SHELL
+    end
+
+    config.vm.define "ns" do |ns|
+        ns.vm.box = "debian/bookworm64"
+        ns.vm.hostname = "ns"
+
+        ns.vm.synced_folder "./ns-config", "/home/vagrant/config"
+
+        ns.vm.network "private_network", ip: "192.168.60.10"
+
+        ns.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y bind9
+        sudo cp /home/vagrant/config/* /etc/bind/
+        sudo systemctl restart bind9
+        SHELL
+    end
+    
+    config.vm.define "ns2" do |ns2|
+        ns2.vm.box = "debian/bookworm64"
+        ns2.vm.hostname = "ns2"
+
+        ns2.vm.synced_folder "./ns2-config", "/home/vagrant/config"
+
+        ns2.vm.network "private_network", ip: "192.168.60.11"
+
+        ns2.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y bind9
+        sudo cp /home/vagrant/config/* /etc/bind/
+        sudo systemctl restart bind9
+        SHELL
+    end
+    
+    config.vm.define "client" do |client|
+        client.vm.box = "debian/bookworm64"
+        client.vm.hostname = "client"
+
+        client.vm.network "private_network", ip: "192.168.60.100"
+
+        client.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y dnsutils
+        sudo sh -c "echo 'nameserver 192.168.60.10' > /etc/resolv.conf"
+        SHELL
+    end
+end

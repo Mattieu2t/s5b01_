@@ -1,0 +1,30 @@
+$TTL 86400
+@ IN SOA ns.syssko.iut. root.syssko.iut. (
+    2023092001 ; Serial
+    3600       ; Refresh
+    1800       ; Retry
+    604800     ; Expire
+    86400     ; Minimum TTL
+)
+
+@ IN NS ns.syssko.iut.
+@ IN NS ns2.syssko.iut.
+
+@ IN MX 10 mx1.syssko.iut.
+@ IN MX 20 mx2.syssko.iut.
+
+@ IN A 192.168.60.2
+
+client IN A 192.168.60.100
+
+ns IN A 192.168.60.10
+ns2 IN A 192.168.60.11
+
+services IN A 192.168.60.30
+www IN CNAME services
+
+mx1 IN A 192.168.60.12
+mx2 IN A 192.168.60.13
+
+
+resolve IN A 192.168.60.20

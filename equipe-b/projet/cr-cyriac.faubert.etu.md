@@ -4,6 +4,9 @@
  - Mise à jour du DNS pour être en raccord avec les autres groupes
  - Changement du DHCP et Vagrant pour fonctionner en 192.168
  - Problème de gestion des interfaces / douglas avec Vagrant / VirtualBox
+ - VirtualBox change les resolv.conf, et impossible des les changer
+ - Changement de branchement (utilisation des deux routeurs pour les différents réseaux)
+ - Ajout du serveur DNS (syssko.iut) il faut encore définir les différentes entrées
 
 
 
