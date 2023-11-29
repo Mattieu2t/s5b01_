@@ -1,0 +1,107 @@
+#Ajout d’une “OU” public
+dn: ou=Public,dc=syssko,dc=iut
+description: Création de public
+ou: Public
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” utilisateurs, une sous catégorie de public
+dn: ou=utilisateurs,ou=public,dc=syssko,dc=iut
+description: Création de utilisateurs
+ou: Utilisateurs
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” groupes, une sous catégorie de public
+dn: ou=groupes,ou=public,dc=syssko,dc=iut
+description: Création de groupes
+ou: Groupes
+objectClass: organizationalUnit
+
+#Ajout des membres utilisateurs
+dn: cn=mseneschael,ou=utilisateurs,ou=public,dc=syssko,dc=iut
+userPassword: mseneschael
+uid: mseneschael
+givenName: m
+sn: seneschael
+cn: mseneschael
+objectClass: inetOrgPerson
+
+#Ajout d’une “OU” prod
+dn: ou=Prod,dc=syssko,dc=iut
+description: Création de prod
+ou: Prod
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” utilisateurs, une sous catégorie de prod
+dn: ou=utilisateurs,ou=prod,dc=syssko,dc=iut
+description: Création de utilisateurs
+ou: Utilisateurs
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” groupes, une sous catégorie de prod
+dn: ou=groupes,ou=prod,dc=syssko,dc=iut
+description: Création de groupes
+ou: Groupes
+objectClass: organizationalUnit
+
+#Ajout des membres utilisateurs
+dn: cn=cfaubert,ou=utilisateurs,ou=prod,dc=syssko,dc=iut
+userPassword: cfaubert
+uid: cfaubert
+givenName: c
+sn: faubert
+cn: cfaubert
+objectClass: inetOrgPerson
+
+#Ajout d’une “OU” info
+dn: ou=Info,dc=syssko,dc=iut
+description: Création de info
+ou: Info
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” utilisateurs, une sous catégorie de info
+dn: ou=utilisateurs,ou=info,dc=syssko,dc=iut
+description: Création de utilisateurs
+ou: Utilisateurs
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” groupes, une sous catégorie de info
+dn: ou=groupes,ou=info,dc=syssko,dc=iut
+description: Création de groupes
+ou: Groupes
+objectClass: organizationalUnit
+
+#Ajout des membres utilisateurs
+dn: cn=mcleret,ou=utilisateurs,ou=info,dc=syssko,dc=iut
+userPassword: mcleret
+uid: mcleret
+givenName: m
+sn: cleret
+cn: mcleret
+objectClass: inetOrgPerson
+
+#Ajout d’une “OU” admin
+dn: ou=Admin,dc=syssko,dc=iut
+description: Création de admin
+ou: Admin
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” utilisateurs, une sous catégorie de admin
+dn: ou=utilisateurs,ou=admin,dc=syssko,dc=iut
+description: Création de utilisateurs
+ou: Utilisateurs
+objectClass: organizationalUnit
+
+#Ajout d’une “OU” groupes, une sous catégorie de admin
+dn: ou=groupes,ou=admin,dc=syssko,dc=iut
+description: Création de groupes
+ou: Groupes
+objectClass: organizationalUnit
+
+#Ajout des membres utilisateurs
+dn: cn=glepretre,ou=utilisateurs,ou=admin,dc=syssko,dc=iut
+userPassword: glepretre
+uid: glepretre
+givenName: g
+sn: lepretre
+cn: glepretre
+objectClass: inetOrgPerson
