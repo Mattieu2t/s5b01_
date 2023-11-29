@@ -7,6 +7,7 @@ Membres
  saad.cheikhaoui.etu
  mohamed.ghazi.etu
  martin.rigaux.etu
+ 
 DNS : techtonic.iut
 
 ---
@@ -73,3 +74,10 @@ Brainstrom -> mise en place de l'infra réseaux + raspberry
 Mise en place du raspberry sur le réseaux avec une range ip qui convient
 Brainstorm sur les differents services
 Réflexion sur la mise en place du firewall, lequel choisir ? -> ipFire
+
+
+
+
+https://www.howtoforge.com/how-to-install-openldap-on-debian-11/
+
+http://koretelecoms.over-blog.com/2020/09/creation-des-comptes-utilisateurs-unix-dans-un-annuaire-ldap.html
