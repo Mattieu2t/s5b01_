@@ -1,0 +1,37 @@
+;$TTL   604800
+$TTL    60
+@       IN      SOA     ns1.iut. root.iut. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; Définition des NS
+@       IN      NS      ns1.iut.
+@       IN      NS      ns2.iut.
+capsule@  IN      NS      ns1.capsule.iut.
+capsule@  IN      NS      ns2.capsule.iut.
+techtonic@  IN      NS      ns1.techtonic.iut.
+techtonic@  IN      NS      ns2.techtonic.iut.
+syssko@ IN      NS      ns1.syssko.iut.
+syssko@ IN      NS      ns2.syssko.iut.
+mandarine@   IN      NS      ns1.mandarine.iut.
+mandarine@   IN      NS      ns2.mandarine.iut.
+
+
+; Définition des IP des NS
+ns1     IN      A       10.10.10.3
+ns2     IN      A       10.10.10.2
+ns1.capsule  IN    A     10.10.10.1
+ns2.capsule  IN    A     10.10.10.1
+ns1.techtonic  IN    A     10.10.10.1
+ns2.techtonic  IN    A     10.10.10.1
+ns1.syssko  IN    A     10.10.10.1
+ns2.syssko  IN    A     10.10.10.1
+ns1.mandarine  IN    A     10.10.10.1
+ns2.mandarine  IN    A     10.10.10.1
+
+; Définition des machines
+help	IN	A	10.10.10.1
+sup	IN	A	10.10.10.1
+dmz IN  A 10.10.10.1
