@@ -25,3 +25,18 @@ olcLogLevel: stats`
 
 Appliquer le changement avec la commande : `sudo ldapmodify -Q -Y EXTERNAL -H ldapi:/// -f logLevel.ldif`
 
+## Sauvegarder l'annuaire sous forme de fichier LDIF :
+
+En cas de perte de données, il est important de sauvegarder l'annuaire afin de pouvoir facilement le restaurer.
+
+- `sudo slapcat -b dc=syssko,dc=com -l syssko_backup.ldif` afin de sauvegarder l'arbre *(copier le fichier sur un autre support pour éviter de le perdre en même temps que la configuration)*
+
+- `sudo tar -cvf syssko_ldap.tar /etc/ldap` afin de sauvegarder la configuration de l'annuaire dans un fichier compressé
+
+Pour restaurer les données : 
+
+- `sudo systemctl stop slapd` afin d'éteindre slapd
+
+- `sudo slapadd -c -b dc=syssko,dc=com -F /etc/ldap/slapd.d -l syssko.ldif` afin de restaurer la base avec la sauvegarde
+
+- `sudo tar -xvf syssko_ldap.tar /etc/ldap ` afin de restaurer la configuration
