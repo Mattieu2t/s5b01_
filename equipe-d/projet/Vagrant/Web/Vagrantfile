@@ -1,0 +1,20 @@
+Vagrant.configure("2") do |config|
+
+    config.vm.box = "debian/bookworm64"
+
+  config.vm.define "web" do |web|
+    web.vm.network "private_network", ip: "192.168.60.81"
+    web.vm.network :forwarded_port, guest:80, host: 8086
+    web.vm.synced_folder "./conf", "/home/vagrant/conf/" 
+    web.vm.provision "shell", inline: <<-SHELL
+      apt-get update 
+      sudo apt-get install apache2 -y 
+      rm /var/www/html/index.html
+      cp /home/vagrant/conf/index-techtonic.html /var/www/html/index.html
+	  
+    SHELL
+
+  end
+
+
+end
