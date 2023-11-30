@@ -31,3 +31,18 @@
 1. Mise en place de la doc pour ldap 
 2. Ajout des different group et utilisateur 
 3. Test et mise en place de restriction
+
+
+### 29/11/23 :
+
+1. Problem ldap je trouvait pas :() 
+
+
+
+### 30/11/23 :
+
+1. Mise en place d'un script ldap 
+2. Test des users ldap + du script (tout est ok) 
+3. Getter pour srv mail
+
+
