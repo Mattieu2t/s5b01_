@@ -49,6 +49,9 @@ Infos supplémentaires :
 | Informatique      | 192.168.60.10     | 255.255.255.0         | Labradorite        | DHCP                      |
 | Informatique      | 192.168.60.20     | 255.255.255.0         | Opale              | LDAP                      |
 | Informatique      | 192.168.60.30     | 255.255.255.0         | Iolite             | NFS                       |
-| Informatique      | 192.168.60.40     | 255.255.255.0         | PC1-I              | Machine pour les admins   |
+| Informatique      | 192.168.60.40     | 255.255.255.0         | Calcédoine         | Proxy Web                 |
+| Informatique      | 192.168.60.50     | 255.255.255.0         | PC1-I              | Machine pour les admins   |
 | Administratif     | 192.168.70.10     | 255.255.255.0         | PC1-A              | Machine pour les salariés |
 | Administratif     | 192.168.70.20     | 255.255.255.0         | PC2-A              | Machine pour les salariés |
+| Production        | 192.168.80.10     | 255.255.255.0         | PC1-P              | Machine pour les salariés |
+| Production        | 192.168.80.20     | 255.255.255.0         | PC2-P              | Machine pour les salariés |
