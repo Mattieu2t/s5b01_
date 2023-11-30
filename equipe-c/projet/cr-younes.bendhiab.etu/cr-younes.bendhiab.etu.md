@@ -22,3 +22,8 @@
 
 - Logiquement terminé la création du fichier utilisateurs.ldif et structure.ldif.
 - À peu près terminé l'automatisation de l'installation d'un serveur LDAP et surtout d'un client LDAP.
+
+## 30-11-2023
+
+- Commencé à regarder pour installer le serveur mail.
+- Réussi à se connecter avec un autre utilisateur sur le serveur LDAP, mais pas sur une machine cliente (bien que je puisse voire les informations contenus sur le serveur LDAP depuis la machine cliente).
