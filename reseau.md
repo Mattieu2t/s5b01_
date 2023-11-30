@@ -9,23 +9,23 @@ Réseau: 10.10.10.0/29
 Gateway: 10.10.10.6  
 Zone DNS: iut  
 
-## Réseau Syssko
+## Réseau Capsule-corp
 
 Réseau: 10.10.10.8/29  
 Gateway: 10.10.10.14  
-Zone DNZ: syssko.iut  
+Zone DNZ: capsule.iut  
 VLAN: 20  
-
-## Réseau Capsule-corp
-
-Réseau: 10.10.10.16/29  
-Gateway: 10.10.10.22  
-Zone DNS: capsule.iut  
-VLAN: 30  
 
 ## Réseau TechTonic
 
+Réseau: 10.10.10.16/29  
+Gateway: 10.10.10.22  
+Zone DNS: techtonic.iut  
+VLAN: 30  
+
+## Réseau Syssko
+
 Réseau: 10.10.10.24/29  
 Gateway 10.10.10.30  
-Zone DNS: techtonic.iut  
+Zone DNS: syssko.iut  
 VLAN: 40  
