@@ -23,4 +23,5 @@ subtitle: Equipe D - TechTonic
 - Début de la mise en place du DNS avec Bind9.
 - Configuration DHCP avec Vlans + configuration BIND9 + Tests DHCP.
 - Configuration du DHCP (fonctionnel).
+- Configuration et test DNS bind9
 
