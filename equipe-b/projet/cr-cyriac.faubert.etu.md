@@ -7,6 +7,8 @@
  - VirtualBox change les resolv.conf, et impossible des les changer
  - Changement de branchement (utilisation des deux routeurs pour les différents réseaux)
  - Ajout du serveur DNS (syssko.iut) il faut encore définir les différentes entrées
+ - Tentative de routage
+ - Mise en place de Squid pour le proxy
 
 
 
