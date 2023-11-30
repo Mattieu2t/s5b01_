@@ -19,3 +19,10 @@
 
 1. J'ai continué la résolution de problèmes du dhcp, j'ai modifié les ip en mettent des ip en classe C.
 2. Dhcp fonctionnel
+
+### 29/11/23 :
+
+1. Connection de notre réseau au réseau du FAI
+2. configuration du DNS et du NAT
+3. Changement de notre infra. On passe de 2 routeurs à 1 routeurs.
+4. Début de la configuration du DNS
