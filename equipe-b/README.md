@@ -5,8 +5,8 @@ subtitle: SYSSKO
 
 # Infos basiques
 - Baie n°4
-- IP public : 10.14.0.0/16
-- IP privé : 192.168.x.x
+- IP public : 10.10.10.8/29
+- IP privé : 192.168.90.x
 - DNS : syssko.iut
 - Connexion à Douglas : cisco@douglasXX.iut-infobio.priv.univ-lille1.fr
 
@@ -18,11 +18,11 @@ subtitle: SYSSKO
 
 
 ## Répartition réseau public
- - Masque donné : 10.14.0.0/16
-   - 10.14.0.0/27
-   - 10.14.32.0/27
-   - 10.14.64.0/27
-   - 10.14.96.0/27
+- 10.10.10.8/29
+- Gateway: 10.10.10.14
+- Zone DNZ: syssko.iut.
+- VLAN: 20
+
 
 Au niveau de la sécurité, aucun serveur ne doit ping le public sauf si il est nécessaire (web, mail…) avec un Fail2Ban sur les différents services publics..
 
@@ -42,10 +42,10 @@ Infos supplémentaires :
 
 | Réseau            | Adresse IP        | Masque de Sous-réseau | Nom de la Machine  | Utilité                   |
 |-------------------|-------------------|-----------------------|--------------------|---------------------------|
-| Public            | 10.14.0.10        | 255.255.0.0           | Kyanite            | DNS                       |
-| Public            | 10.14.0.20        | 255.255.0.0           | Topaze             | Email                     |
-| Public            | 10.14.0.30        | 255.255.0.0           | Péridot            | Web                       |
-| Public            | 10.14.0.40        | 255.255.0.0           | Quartz             | Firewall                  |
+| Public            | 10.10.10.9        | 255.255.0.0           | Kyanite            | DNS                       |
+| Public            | 10.10.10.10       | 255.255.0.0           | Topaze             | Email                     |
+| Public            | 10.10.10.11       | 255.255.0.0           | Péridot            | Web                       |
+| Public            | 10.10.10.12       | 255.255.0.0           | Quartz             | Firewall                  |
 | Informatique      | 192.168.60.10     | 255.255.255.0         | Labradorite        | DHCP                      |
 | Informatique      | 192.168.60.20     | 255.255.255.0         | Opale              | LDAP                      |
 | Informatique      | 192.168.60.30     | 255.255.255.0         | Iolite             | NFS                       |
