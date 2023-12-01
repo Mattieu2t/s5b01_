@@ -96,7 +96,6 @@ refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
 refresh_pattern .               0       20%     4320
 </p>
 </details>
-<br>
 
 Voici une liste des directives utilisés par défaut et leur utilitées:
 
