@@ -12,3 +12,12 @@
 29/11/23 : 
 - Tentative de finir le serveur DNS
 - Commencement de la documentation de DHCP
+
+30/11/23 : 
+- Documentation pour les routeur et les commutateurs
+- Changement sur le reseau public
+- Sauvegarde des Routeur 1 et 2 avec tftp
+
+01/12/23 : 
+- Reseau public modifié, translation d'IP privé public
+- Sauvegarde des routeurs et commutateurs
