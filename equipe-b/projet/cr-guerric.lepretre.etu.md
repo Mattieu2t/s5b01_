@@ -7,3 +7,6 @@
 
 # mercredi 29 novembre
  - test sur R0 et R1 pour le routage
+
+# jeudi 30 novembre
+ - tentative de routage (spoile ca marche pas)
