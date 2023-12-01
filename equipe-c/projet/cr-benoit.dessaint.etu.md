@@ -25,12 +25,24 @@
 
 - Debug DHCP pour qu'il attribue la bonne IP en fonction du sous-réseau sur lequel la machine est branchée
 
-- Mise en place du DNS Dynamique pour mettre à jour automatiquement le DNS via le DHCP
+- Mise en place du DNS Dynamique pour mettre à jour automatiquement le DNS via le DHCP (sur des machines de test)
 - Debug du DDNS
 - Début du serveur NFS
 - Création des Vagrantfile pour les postes utilisateurs 
 
 ## Mercredi 29 Novembre 2023
-
+- Mise en place du DNS dynamique sur l'infrastructure
 - Debug du DNS dynamique car il attribuait un DNS aux machines Douglas. Il a donc été nécessaire de faire une exception pour ces machines afin de leur laisser le DNS de l'Université 
 - Finalisation du DHCP, tests sur plusieurs Vagrantfile se trouvant sur des sous-réseaux différents.
+
+## Jeudi 30 Novembre 2023
+
+- Journée sur le DNS, jusque la le DHCP donnait le DNS aux machines mais les machines n'étaient pas ajoputées au DNS. Problème de permission pour modifier le DNS
+
+## Vandredi 1 Décembre 2023
+
+- DNS enfin disponible
+- Sécurisation du DNS dynamique à l'aide d'une clé
+- Tests avec différentes machines sur les différents réseaux
+- Création des machines utilisateurs avec Firefox et Thunderbird
+
