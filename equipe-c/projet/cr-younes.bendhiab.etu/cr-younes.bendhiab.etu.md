@@ -27,3 +27,8 @@
 
 - Commencé à regarder pour installer le serveur mail.
 - Réussi à se connecter avec un autre utilisateur sur le serveur LDAP, mais pas sur une machine cliente (bien que je puisse voire les informations contenus sur le serveur LDAP depuis la machine cliente).
+
+## 01-12-2023
+
+- Commencé à documenter et à installer le cache-proxy "Squid"
+- Encore essayé de faire fonctionner un client LDAP (ne marche toujours pas, je verrais la semaine prochaine avec le cours de monsieur Hauspie).
