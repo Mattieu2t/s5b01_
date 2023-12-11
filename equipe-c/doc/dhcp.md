@@ -82,10 +82,6 @@ Voici un exemple pour une écoute sur l'interface réseau `eth1` pour des adress
 
     INTERFACESv4="eth1"
 
-Une fois les différents sous réseaux mis en place dans votre serveur vous pouvez redémarrer le service isc-dhcp-serveur à l'aide de la commande :
-
-    root@dhcp:$ systemctl restart isc-dhcp-server
-
 
 ## Configuration avec un DNS dynamique
 
@@ -129,6 +125,16 @@ zone  permet de définir la zone DNS a mettre à jour.
 Retrouvez la configuration complète de `dhcpd.conf` ici  
 Retrouvez la configuration complète de `isc-dhcp-server` ici
 
+---
+
 Vous pouvez lancer votre serveur dhcp a l'aide de cette commande :
 
     cisco@douglasXX:~/dhcp$ vagrant up
+
+Une fois la machine lancée vous pouvez voir le status de votre serveur DHCP à l'aide de la commande suivant :
+
+    root@dhcp:$ systemctl status isc-dhcp-server
+
+Si vous effectuez des modifications dans votre serveur DHCP vous pouvez redémarrer le service isc-dhcp-server à l'aide de la commande suivante :
+
+    root@dhcp:$ systemctl restart isc-dhcp-server
