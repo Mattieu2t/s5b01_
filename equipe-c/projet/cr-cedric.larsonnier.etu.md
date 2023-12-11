@@ -21,3 +21,10 @@
 01/12/23 : 
 - Reseau public modifié, translation d'IP privé public
 - Sauvegarde des routeurs et commutateurs
+
+
+
+
+11/12/23 : 
+- Scripts pour lancer les vagrants
+- Recherche d'un panel graphique (cluster kurbernetes)
