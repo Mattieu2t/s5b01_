@@ -124,7 +124,7 @@ option domain-name-servers : permet de spécifier l'adresse IP du serveur DNS
 
 zone  permet de définir la zone DNS a mettre à jour.
 
-
+----
 
 Retrouvez la configuration complète de `dhcpd.conf` ici  
 Retrouvez la configuration complète de `isc-dhcp-server` ici
