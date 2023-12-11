@@ -1,4 +1,4 @@
-# Compte rendu de la semaine du 13 au 17 novembre
+# Compte rendu de la semaine du 27 au 01 novembre
 
 ## Avancement :
 - Mise en place du LDAP, Web et du DHCP, DNS et Proxy
