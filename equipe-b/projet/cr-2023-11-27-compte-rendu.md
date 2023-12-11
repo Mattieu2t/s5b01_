@@ -13,3 +13,6 @@
 ## Tâches à faire pour la semaine suivante
 - Finir la config DNS et Proxy
 - Schématisation du réseau
+- Synchronisation du LDAP avec les différents services
+- Routage réseau
+- Finir (faire) le firewall

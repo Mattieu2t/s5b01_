@@ -11,7 +11,10 @@
  - Mise en place de Squid pour le proxy
 
 # Semaine 48 (11/12 au 15/12)
-
+ - Rédaction du compte rendu de la semaine dernière
+ - Création du schéma des machines et branchement (synthèse)
+ - Création du vagrant du NFS avec Mattieu
+ - Verification de comment synchroniser LDAP et NFS (ou autre service)
 
 # Notes :
  - Utiliser "Squid" pour le proxy pour les machines et l'accès à internet
