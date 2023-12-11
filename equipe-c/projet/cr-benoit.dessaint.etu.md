@@ -46,3 +46,8 @@
 - Tests avec différentes machines sur les différents réseaux
 - Création des machines utilisateurs avec Firefox et Thunderbird
 
+## Lundi 11 Décembre 2023
+
+- Automatisation du déploiement du DNS et du DHCP
+- Réalisation de la documentation sur le DHCP et le DNS (et DNS dynamique)
+- Mise en place du serveur NFS
