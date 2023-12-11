@@ -40,3 +40,13 @@ subtitle: Equipe D - TechTonic
 1. Familiarisation avec NFS
 2. Mise en commun avec Augustion sur les liens entre NFS et LDAP
 3. Premiers tests NFS 
+
+### 30/11/23 :
+
+1. Finalisation du serveur NFS et de sa structure
+2. Premiers tests de connexions entre NFS et LDAP via une machine cliente
+
+### 11/12/23 :
+
+1. Je continue de lier NFS et LDAP 
+2. Configuration de la machine cliente (web,nfs,ldap)
