@@ -25,3 +25,6 @@ subtitle: Equipe D - TechTonic
 - Configuration du DHCP (fonctionnel).
 - Configuration et test DNS bind9
 
+## Semaine 50 (11/12 au 15/12)
+
+- Mise en place de la mise a jour automatiquement de zone bind9 avec dhcp
