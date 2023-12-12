@@ -1,0 +1,38 @@
+key "ma_cle" {
+	algorithm hmac-md5;
+	secret "T8IPu5PsyOAadgsHF1Vf1Q==";
+};
+
+zone "techtonic.iut" {
+    type master;
+    file "/etc/bind/zones/techtonic.iut";
+    allow-update { key "ma_cle"; };
+};
+
+zone "10.10.10.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/techtonic.rev.iut";
+    allow-update { key "ma_cle"; };
+
+};
+
+zone "12.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/informatique.techtonic.iut";
+    allow-update { key "ma_cle"; };
+
+};
+
+zone "13.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/administration.techtonic.iut";
+    allow-update { key "ma_cle"; };
+
+};
+
+zone "14.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/production.techtonic.iut";
+    allow-update { key "ma_cle"; };
+
+};
