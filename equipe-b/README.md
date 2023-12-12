@@ -27,10 +27,10 @@ subtitle: SYSSKO
 Au niveau de la sécurité, aucun serveur ne doit ping le public sauf si il est nécessaire (web, mail…) avec un Fail2Ban sur les différents services publics..
 
 ## Organisation des réseaux 
- - 1 réseau public
+   - 1 réseau public
    - Serveur web
    - Serveur mail
- - 3 réseau privé
+   - 3 réseau privé
    - Service info
    - Service administratif
    - Service production (public)
