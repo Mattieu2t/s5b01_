@@ -1,0 +1,184 @@
+
+!
+! Last configuration change at 00:32:58 UTC Mon Mar 1 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname S4
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3305776256
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3305776256
+ revocation-check none
+ rsakeypair TP-self-signed-3305776256
+!
+!
+crypto pki certificate chain TP-self-signed-3305776256
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33333035 37373632 3536301E 170D3933 30333031 30303030 
+  35395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 33303537 
+  37363235 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100961A 7991A48E F9A8A380 37667AC4 0BE8F5CD 8D4F0FEC 425ABCDC 55C020F2 
+  5B6E90E0 4A23C06A DC3A6630 4CC8C8C3 A02B2CE3 9C9FDFFB 6D011179 4650F22E 
+  D749A862 A711F13D 02D9563E 7D6DD3DF C42D866E 94DDC9BA 874FEDB8 EB06EA13 
+  114722FB C22EAB71 0AA9396E 72B04FF3 6FA747C9 476D2ED8 9502EF32 6A52C1EF 
+  B75D0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14C39B21 ED7FFDEA 4E1B0625 6077F870 AC86696B 87301D06 
+  03551D0E 04160414 C39B21ED 7FFDEA4E 1B062560 77F870AC 86696B87 300D0609 
+  2A864886 F70D0101 05050003 8181002B 80F3BA96 7A60BF7A AEEDF176 9811A1B4 
+  4BA3453B 19233050 896886D9 BAD2B0F5 D767AE22 39C7FD08 F3E142EC 897E4B63 
+  C66810B5 7736E7AA 5F95B543 D500AF1E 17B8BF96 21F44494 DDFC84E9 B108BECB 
+  E6A5E3DE F707A00C AE4A239B 8A151560 6201A1CA 0A875792 CA8D04E6 63D3344D 
+  D09C3370 7B11F36D 73CBECCF 74D688
+  	quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/24
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan14
+ ip address 192.168.14.2 255.255.255.0
+!
+ip http server
+ip http secure-server
+!
+tftp-server flash:s4save 1
+!
+!
+line con 0
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end
