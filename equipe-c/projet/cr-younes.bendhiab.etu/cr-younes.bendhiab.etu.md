@@ -41,6 +41,8 @@
 
 - Refonte de l'arbre LDAP + documentation. N'a pas réussi à faire fonctionner PAM (cours arrive la semaine prochaine).
 
+![Schéma LDAP New](ldap2.drawio.svg)
+
 ## 12-12-2023
 
 - 
