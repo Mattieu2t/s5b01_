@@ -58,3 +58,9 @@
 1. Mise en commun avec le group (qui a fait quoi)
 2. Ce qu'il reste a faire ?
 3. Ldap -> j'ai un probleme avec le script + je ne trouve pas comment me connecter depuis une machine cleinte.
+
+
+### 12/12/23 :
+
+1. Mise en place du client ldap 
+2. Test plus dernier réglage 
