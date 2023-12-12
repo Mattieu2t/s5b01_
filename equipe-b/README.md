@@ -58,3 +58,6 @@ Infos supplémentaires :
 
 # Schéma du brachement et des VMs
 ![image](doc/images/diagram-reseau.png)
+
+# Brachement sur les machines
+![image-machine](doc/images/cablage_machine.jpg)
