@@ -15,6 +15,7 @@
  - Création du schéma des machines et branchement (synthèse)
  - Création du vagrant du NFS avec Mattieu
  - Verification de comment synchroniser LDAP et NFS (ou autre service)
+ - Mise en forme des documentations
 
 # Notes :
  - Utiliser "Squid" pour le proxy pour les machines et l'accès à internet
