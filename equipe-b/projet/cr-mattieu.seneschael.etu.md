@@ -8,3 +8,4 @@
 - Découverte et configuration du fichier vagrant pour NFS
 - update LDAP
 - ajout doc pour les fichiers vagrantfile
+- firewall
