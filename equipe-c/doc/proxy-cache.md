@@ -14,7 +14,7 @@ Ce serveur cache se place sur le réseau privé des utilisateurs faisant parti �
 
 De cette manière, tout les utilisateurs d'un même réseau passent par un proxy cache. Les fichiers téléchargés par un utilisateur sont enregistrés dans le cache proxy. Si un autre utilisateur demande les mêmes fichiers, ils seront récupérés depuis le cache proxy permettant un accès plus rapide pour les utilisateurs.
 
-| ![Schéma cache-proxy](images/cache-proxy.svg) | 
+| ![Schéma cache-proxy](images/cache-proxy-schema.svg) | 
 |:--:| 
 | *Image simplifiée du réseau intégrant le proxy* |
 
