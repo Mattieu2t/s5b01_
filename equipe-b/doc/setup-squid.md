@@ -1,4 +1,4 @@
-# Guide d'Installation et Configuration
+# Guide d'Installation et Configuration SQUID
 
 Ce guide détaille les étapes pour mettre en place une machine virtuelle avec des configurations spécifiques.
 
