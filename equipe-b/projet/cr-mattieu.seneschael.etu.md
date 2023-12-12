@@ -7,3 +7,4 @@
 # Semaine 49 (11/12 au 15/12)
 - Découverte et configuration du fichier vagrant pour NFS
 - update LDAP
+- ajout doc pour les fichiers vagrantfile
