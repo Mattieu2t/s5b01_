@@ -55,3 +55,6 @@ Infos supplémentaires :
 | Administratif     | 192.168.70.20     | 255.255.255.0         | PC2-A              | Machine pour les salariés |
 | Production        | 192.168.80.10     | 255.255.255.0         | PC1-P              | Machine pour les salariés |
 | Production        | 192.168.80.20     | 255.255.255.0         | PC2-P              | Machine pour les salariés |
+
+# Schéma du brachement et des VMs
+![image](doc/images/diagram-reseau.png)
