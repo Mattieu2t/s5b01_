@@ -37,3 +37,8 @@
 
 1. Début du installation du pare-feu et configuration des routeurs
 2. configuration du proxy.
+
+### 12/12/23 :
+
+1. Aide sur la configuration de LDAP
+2. Réflection et test pour pouvoir mettre un firewall avec une seul interface réseau
