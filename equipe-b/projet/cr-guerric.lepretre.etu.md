@@ -10,3 +10,11 @@
 
 # jeudi 30 novembre
  - tentative de routage (spoile ca marche pas)
+
+# lundi 11 & mardi 12 décembre
+ - commencement de créations des VMs (vagrant) pour les machines de Station de travail
+
+# mercredi 13 décembre
+ - fix des mauvaises IPs dans les configuration
+ - écriture de la documentation pour le Server de Mail
+ - rectification de la doc pour le server web	
