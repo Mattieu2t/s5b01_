@@ -64,3 +64,9 @@
 
 1. Mise en place du client ldap 
 2. Test plus dernier réglage 
+
+
+### 13/12/23 :
+
+1. Mise en place de la documentation pour ldap/srv web/dns/nfs
+ 
