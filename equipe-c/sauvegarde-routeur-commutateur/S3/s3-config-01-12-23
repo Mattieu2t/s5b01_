@@ -1,0 +1,138 @@
+
+!
+! Last configuration change at 00:00:40 UTC Mon Mar 1 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname S3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3853814528
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3853814528
+ revocation-check none
+ rsakeypair TP-self-signed-3853814528
+!
+!
+crypto pki certificate chain TP-self-signed-3853814528
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33383533 38313435 3238301E 170D3933 30333031 30303030 
+  35355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 38353338 
+  31343532 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100B2CF DF24095C EA9C19B3 F7901C03 E6AC99B2 F6FBACD8 0F5C90C8 757E34EB 
+  9D11B696 031F4006 C424B91C F805E482 B08FF2AA 71F778A7 EBA8AF17 88D20602 
+  FDB3F8E5 59C11998 5BDD2AF1 F18B8904 92939FAB B7327A8C F17F72A5 077A5DDE 
+  747A680B DD28B3B9 35994410 076A9CEE C85B8239 6FE8F72F B80809DF 0105CCB6 
+  6B090203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14BE9405 13F7BB20 796CB0FF C10AF67C 77148DB1 07301D06 
+  03551D0E 04160414 BE940513 F7BB2079 6CB0FFC1 0AF67C77 148DB107 300D0609 
+  2A864886 F70D0101 05050003 81810020 C35DD711 614A3D9F 720E3BB2 9EA4A82D 
+  FC7F078A 4B0D54BC 8FA82D37 F29D6BA8 F759978A C88BA24C BE029A19 EF8ECBB4 
+  07D0FA82 B24C9F78 54A96DA2 48EBBF65 21E42359 56854948 3E615F5E AFD6D784 
+  DB497AB5 A3ABF5CA F66CDF51 FE0976DD 9AFD1F6F 067F3C8C 2A2AF3BC 66C23001 
+  B562F6A1 35A6DA4D 698627E2 6E6966
+  	quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport mode trunk
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan23
+ ip address 192.168.23.253 255.255.255.0
+!
+ip http server
+ip http secure-server
+!
+!
+!
+line con 0
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end

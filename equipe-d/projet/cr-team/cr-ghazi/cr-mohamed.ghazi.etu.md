@@ -42,3 +42,8 @@
 
 1. Aide sur la configuration de LDAP
 2. Réflection et test pour pouvoir mettre un firewall avec une seul interface réseau
+
+### 13/12/23 :
+
+1. J'ai réussi mettre en place un firewall via pfsense mais pas fini de configurer les rules
+2. Test de différentes rules et configuration sur le firewall

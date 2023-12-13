@@ -1,0 +1,9 @@
+$TTL 10800;
+prod.capsule.iut. IN SOA ns.prod.capsule.iut. root.prod.capsule.iut.(
+1 ; Serial
+1D ; Refresh
+2H ; Retry
+7D ; Expire
+1H ) ; Cache TTL
+@ IN NS ns.prod.capsule.iut.
+ns.prod.capsule.iut. IN A 192.168.4.2

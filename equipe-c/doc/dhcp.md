@@ -3,53 +3,52 @@
 ## 1. Introduction 
 
 Mise en place d'un service DHCP a l'aide de vagrant et du paquet isc-dhcp-server.  
-Le protocole DHCP permet au serveur DHCP de donner des adresses IP à des machines du réseau en fonction du sous réseau sur lequel elles se situent.  
-Le paquet isc-dhcp-server nous permet de creer le serveur DHCP sur la machine.    
-Vagrant vas creer une machine rapidement avec toute ça configuration grace au Vagrantfile
+Le serveur DHCP donne des adresses IP aux machines sur le réseau en fonction du sous réseau sur lequel elles se situent.  
+Grace a vagrant le serveur DHCP ce créer rapidement avec ça configuration déjà implémenté.
 
 ## 2. Pré-requis  
 
-- Disposé d'un reseaux local
-- Avoir les bases de TCP/IP
-- Avoir configuré les Router 1 et 2 de la baies 
-- Avoir configuré les Switch 1 à 3 de la baies 
+- Avoir configuré les Router 1 et 2 de la baies ([routeur 1 et 2](router.md))
+- Avoir configuré les Switch 1 à 4 de la baies ([Switch 1 à 4](switch.md))
 
 ## 3. Instalation
 
 Connectez vous sur une machine `douglasXX`. (nom et mdp : `cisco` )  
-Creer un dossier dans le dossier courant et appelé le `dhcp` :  
+Creer un dossier 'dhcp' dans le dossier courant, ce dossier vas contenir tout les fichier d'installation du serveur DHCP :  
 
     cisco@douglasXX:~$ mkdir dhcp
 
-Maintenant vous allez creer un fichier `Vagrantfile` dans le dossier dhcp a l'aide de cette commande : 
+Maintenant creez un fichier `Vagrantfile` dans le dossier dhcp a l'aide de cette commande : 
 
     cisco@douglasXX:~/dhcp$ vagrant init
 
-Vous pouvez remplacer tout le fichier `Vagrantfile` par ceci :
+Le fichier Vagrantfile est le fichier le plus important, grace a lui nous allons créer une machine virtuelle ou nous allons ajouté toute les configurations nécessaire a l'installation du serveur DHCP.
+
+Voici la configuration du Vagrantfile pour créer le serveur DHCP :
 
 ```sh
-Vagrant.configure("2") do |config|
-  
-  config.vm.box = "debian/bookworm64"
-
-  config.vm.define "dhcp" do |dhcp|
-    dhcp.vm.hostname = "dhcp"
-    dhcp.vm.network "public_network",bridge: "enp1s2", ip:"192.168.21.250", netmask: "255.255.255.0"
-    dhcp.vm.provision "file", source: "config/dhcpd.conf",destination: "/tmp/"
-    dhcp.vm.provision "file", source: "config/isc-dhcp-server",destination: "/tmp/"      
-    dhcp.vm.provision "shell", inline: <<-SHELL
-      apt update -y
-      apt install -y isc-dhcp-server
-      cp -f /tmp/dhcpd.conf /etc/dhcp/
-      cp -f /tmp/isc-dhcp-server /etc/default/
-      systemctl restart isc-dhcp-server
-      ip route del default via 10.0.2.2
-      ip route add default via 192.168.21.1 dev eth1
-    SHELL
-  end
-
+config.vm.define "dhcp" do |dhcp|
+  dhcp.vm.hostname = "dhcp"
+  dhcp.vm.network "public_network",bridge: "enp1s2", ip:"192.168.21.250", netmask: "255.255.255.0"
+  dhcp.vm.provision "file", source: "config/dhcpd.conf",destination: "/tmp/"
+  dhcp.vm.provision "file", source: "config/isc-dhcp-server",destination: "/tmp/"      
+  dhcp.vm.provision "shell", inline: <<-SHELL
+    apt update -y
+    apt install -y isc-dhcp-server
+    cp -f /tmp/dhcpd.conf /etc/dhcp/
+    cp -f /tmp/isc-dhcp-server /etc/default/
+    systemctl restart isc-dhcp-server
+    ip route del default via 10.0.2.2
+    ip route add default via 192.168.21.1 dev eth1
+  SHELL
 end
 ```
+
+IP de la machine : 192.168.21.250/24  
+Dans cette config vagrant nous retrouverons les fichiers `dhcpd.conf` et `isc-dhcp-server` que nous allons transférer dans le dossier `/tmp`, sur la machine DHCP.  
+Ensuite nous allons lancer un SHELL afin de mettre a jour la machine, déplacer les fichiers de configuartion de DHCP et changer les route par defaut. 
+
+Pour avoir la configuration final du Vagrantfile vous la retrouveré [ici](dhcp-nfs/Vagrantfile)
 
 ## Configuration 
 
@@ -65,7 +64,7 @@ Vous avez juste a modifier les fichier dhcpd.conf et isc-dhcp-server :
 
 Le fichier dhcpd.conf contient les informations de sous réseau pour l'attribution des machines.
 
-La mise en place d'un pool d'adresse d'un sous réseau s'effectue comme ceci : 
+La mise en place d'un `pool` d'adresse d'un sous réseau s'effectue comme ceci : 
 
 ```
 subnet 192.168.21.0 netmask 255.255.255.0 {
@@ -114,27 +113,32 @@ subnet 192.168.21.0 netmask 255.255.255.0 {
 
 Ici nous avons ajouté différentes options : 
 
-option domain-name : permet de spécifier le nom de domaine des machines sur ce sous-réseau
+`option domain-name` : permet de spécifier le nom de domaine des machines sur ce sous-réseau
 
-option domain-name-servers : permet de spécifier l'adresse IP du serveur DNS
+`option domain-name-servers` : permet de spécifier l'adresse IP du serveur DNS
 
-zone  permet de définir la zone DNS a mettre à jour.
+`zone info.capsule.iut.` permet de définir la zone DNS a mettre à jour.
 
-----
-
-Retrouvez la configuration complète de `dhcpd.conf` ici  
-Retrouvez la configuration complète de `isc-dhcp-server` ici
-
----
+## Commande d'initialisation 
 
 Vous pouvez lancer votre serveur dhcp a l'aide de cette commande :
 
     cisco@douglasXX:~/dhcp$ vagrant up
 
-Une fois la machine lancée vous pouvez voir le status de votre serveur DHCP à l'aide de la commande suivant :
 
-    root@dhcp:$ systemctl status isc-dhcp-server
+Une fois la machine lancée vous pouvez vous y connecter et voir le status de votre serveur DHCP à l'aide de la commande suivant :
+    
+    cisco@douglasXX:~/dhcp$ vagrant ssh dhcp
+    vagrant@dhcp:$ sudo systemctl status isc-dhcp-server
 
 Si vous effectuez des modifications dans votre serveur DHCP vous pouvez redémarrer le service isc-dhcp-server à l'aide de la commande suivante :
 
-    root@dhcp:$ systemctl restart isc-dhcp-server
+    vagrant@dhcp:$ sudo systemctl restart isc-dhcp-server
+
+
+----
+
+Retrouvez la configuration complète de `dhcpd.conf` [ici](dhcp-nfs/config/dhcp/dhcpd.conf)  
+Retrouvez la configuration complète de `isc-dhcp-server` [ici](dhcp-nfs/config/dhcp/isc-dhcp-server)
+
+---

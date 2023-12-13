@@ -33,3 +33,8 @@ Semaine 50 :
 12/12/23 :
 - Script pour lancer l'infrastructure des machines vagrants
 - Documentation sur l'infrastructure
+
+13/12/23 :
+- Finalisation de la documantation de dhcp
+- Ajout et modification des Vagrantfile dns et dhcp
+- Firewall Pfsense
