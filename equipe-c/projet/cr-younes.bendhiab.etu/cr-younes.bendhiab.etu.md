@@ -45,4 +45,7 @@
 
 ## 12-12-2023
 
-- 
+- Réussi à faire fonctionner une connexion contre le serveur LDAP. LDAP logiquement terminé.
+- Finition de la documentation pour le proxy.
+
+## 13-12-2023
