@@ -50,3 +50,8 @@ subtitle: Equipe D - TechTonic
 
 1. Je continue de lier NFS et LDAP 
 2. Configuration de la machine cliente (web,nfs,ldap)
+
+### 12/12/23 :
+
+1. La connexion entre LDAP et NFS est faites. Création automatique d'un répertoire si l'utilisateur est nouveau 
+2. Classement des dossiers et récapitulatif de ce que nous avons fait et ce qu'il nous reste à faire
