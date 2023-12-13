@@ -51,3 +51,14 @@
 - Automatisation du déploiement du DNS et du DHCP
 - Réalisation de la documentation sur le DHCP et le DNS (et DNS dynamique)
 - Mise en place du serveur NFS
+
+## Mardi 12 Décembre
+
+- Discussions autour de LDAP et NFS
+- Aide FAI pour faire commiquer nos DNS (comprendre leur infrastructure, trouver les causes du problème)
+
+
+## Mercredi 13 Décembre 
+
+- Aide FAI pour faire commiquer nos DNS (résolution du problème + tests)
+- Lecture d'une documentation sur la sécurisation du DNS avec BIND et mise en place de certains conseils.
