@@ -1,0 +1,45 @@
+dn: dc=techtonic,dc=iut
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: techtonic
+dc: techtonic
+structuralObjectClass: organization
+entryUUID: f1a635bc-23cd-103e-8541-135b3dab5934
+creatorsName: cn=admin,dc=techtonic,dc=iut
+createTimestamp: 20231130131306Z
+entryCSN: 20231130131306.052999Z#000000#000#000000
+modifiersName: cn=admin,dc=techtonic,dc=iut
+modifyTimestamp: 20231130131306Z
+
+dn: ou=Personnes,dc=techtonic,dc=iut
+objectClass: organizationalUnit
+ou: Personnes
+structuralObjectClass: organizationalUnit
+entryUUID: f405de34-23cd-103e-9d01-3908e3bf81ad
+creatorsName: cn=admin,dc=techtonic,dc=iut
+createTimestamp: 20231130131310Z
+entryCSN: 20231130131310.035308Z#000000#000#000000
+modifiersName: cn=admin,dc=techtonic,dc=iut
+modifyTimestamp: 20231130131310Z
+
+dn: cn=alice,ou=Personnes,dc=techtonic,dc=iut
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: alice
+uid: alice
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/alice
+userPassword:: dGVzdA==
+loginShell: /bin/bash
+structuralObjectClass: account
+entryUUID: f58682ea-23cd-103e-9d02-3908e3bf81ad
+creatorsName: cn=admin,dc=techtonic,dc=iut
+createTimestamp: 20231130131312Z
+entryCSN: 20231130131312.556165Z#000000#000#000000
+modifiersName: cn=admin,dc=techtonic,dc=iut
+modifyTimestamp: 20231130131312Z
+
