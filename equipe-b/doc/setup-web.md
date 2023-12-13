@@ -2,15 +2,15 @@
 
 Ce guide détaille les étapes pour mettre en place une machine virtuelle avec des configurations réseau, services et web spécifiques.
 
-### Configuration de la Machine "topaze"
+### Configuration de la Machine "peridot"
 
-La configuration de la machine "topaze" comprend les éléments suivants :
+La configuration de la machine "peridot" comprend les éléments suivants :
 
-1. **Définition de la Machine :** Nom de la machine : "topaze"
+1. **Définition de la Machine :** Nom de la machine : "peridot"
 2. **Réseau :**
-   - Configuration de deux interfaces réseau :
-     - **Interface 1 :** Réseau public avec une IP spécifique : `10.14.0.3`, via la carte `enp1s2`.
-     - **Interface 2 :** Utilisation d'un port forwarding pour rediriger le port `80` de la machine virtuelle vers le port `8081` de l'hôte.
+   - Configuration l'interfaces réseau :
+     - Réseau public avec une IP spécifique : `10.10.10.11`, via la carte `enp1s2`.
+     - Utilisation d'un port forwarding pour rediriger le port `80` de la machine virtuelle vers le port `8081` de l'hôte.
 3. **Partage de Dossiers :**
    - Dossier local "conf" synchronisé avec `/home/vagrant/conf` sur la machine virtuelle.
 4. **Provisionnement :**
