@@ -13,12 +13,28 @@ DNS : techtonic.iut
 ---
 
 # Notre projet : 
-Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objectif de mettre en place une infrastructure réseau. Pour notre réseau privé, il est essentiel de déployer un pare-feu (Linux) afin de garantir la sécurité.
+Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objectif de mettre en place une infrastructure réseau. Pour notre réseau privé.
 
-Voici ci-dessous le schéma de notre infrastructure réseau :
+# Les services installés :
 
-![Alt text](image.wepb)  
+- Ldap 
+- Serveur de mail
+- Serveur Web (Apache)
+- Dhcp
+- Dns
+- Nfs 
 
+| Réseau            | Adresse IP        | Masque de Sous-réseau | Nom de la Machine  | Utilité                   |
+|-------------------|-------------------|-----------------------|--------------------|---------------------------|
+| Public            | 10.10.10.18       | 255.255.255.248       | Douglas05          | DNS                       |
+| Public            | 10.10.10.10       | 255.255.255.0         | Douglas05          | Mail                      |
+| Public            | 10.10.10.17       | 255.255.255.249       | Douglas05          | Web                       |
+| Public            | 10.10.10.19       | 255.255.255.0         | Douglas05          | Firewall                  |
+| Privé             | 192.168.12.254    | 255.255.255.0         | Douglas05          | DHCP                      |
+| Privé             | 192.168.12.252    | 255.255.255.0         | Douglas05          | LDAP                      |
+| Privé             | 192.168.12.253    | 255.255.255.0         | Douglas05          | NFS                       |
+| Privé             | 192.168.12.251    | 255.255.255.0         | Douglas05          | Proxy Web                 |
+| Privé             | 192.168.12.240    | 255.255.255.0         | PC1                | Clien LDAP                |
 
 
 
@@ -26,20 +42,15 @@ Voici ci-dessous le schéma de notre infrastructure réseau :
 Pour cette première semaine, notre équipe a adopté une approche collaborative où chaque membre travaille sur un pied d'égalité. Les décisions sont prises collectivement après concertation. Chacun a une tâche spécifique pour assurer le bon déroulement du projet.
 Voici le role d'intermédiaire pour chaque semaine : 
 
-semaine 39 du 25/09 au 29/09 -> saad
-semaine 41 du 09/10 au 13/10 -> momo
-semaine 46 du 13/11 au 17/11 -> augustin
-semaine 48 du 27/11 au 01/12 -> martin 
-semaine 50 du 11/12 au 15/12
-
-
-
+- semaine 39 du 25/09 au 29/09 -> saad
+- semaine 41 du 09/10 au 13/10 -> mohamed
+- semaine 46 du 13/11 au 17/11 -> augustin
+- semaine 48 du 27/11 au 01/12 -> martin 
+- semaine 50 du 11/12 au 15/12 -> mohamed
 
 
 # Information : 
 Pour ce projet nous allons travailler sur la baie N°3 ainsi que sur le réseaux privé : 10.13.0.0
-
-
 
 
 # Question : 
@@ -49,35 +60,13 @@ Est ce que le réseaux priver a accèes a internet ?
 on laisse tout sortir mais pas rentrer 
 Est ce que le réseaux privé y doit etre dans la tranche 10.13.0.0 
 
+# Dépot : 
 
+Chaque service se trouve dans le répertoire à son nom. Dans chaque dépôt, vous trouverez un Vagrantfile avec la documentation associée pour réaliser l'installation du service.
+ 
 
-# Note : 
-notre routeur doit juste communiquer avec le fai qui lui devra nous faire communiquer avec les autre routeur
-on doit mettre en place un serveur de mail, serveur web, dns, firewall. 
-Imaginer cette semaine -> text
-compte rendu tout les jours -> tableaux 
-git -> dossier par equipe 
-réseaux priver firewall devant (linux)  
-Comment on travail dans l'equipe -> planifier  
-address mac des routeur 1 et 2 
+# Compte rendu :
 
+Chaque membre de l'équipe dépose un compte rendu hebdomadaire de ce qu'il a fait. Vous pouvez retrouver ses comptes rendus dans le répertoire **/projet/cr-team**
 
-
-# Lund 13 Nov 
-
-Chef pour la semaine-> Augustin
-
-Brainstrom -> mise en place de l'infra réseaux + raspberry 
-
-# Mard 14 Nov 
-
-Mise en place du raspberry sur le réseaux avec une range ip qui convient
-Brainstorm sur les differents services
-Réflexion sur la mise en place du firewall, lequel choisir ? -> ipFire
-
-
-
-
-https://www.howtoforge.com/how-to-install-openldap-on-debian-11/
-
-http://koretelecoms.over-blog.com/2020/09/creation-des-comptes-utilisateurs-unix-dans-un-annuaire-ldap.html
+Chaque semaine, l'équipe fait également le point sur l'avancement du projet. Vous pouvez retrouver ces comptes rendus dans le répertoire **/projet/cr-hebdo**
