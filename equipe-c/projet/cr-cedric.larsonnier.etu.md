@@ -1,5 +1,7 @@
 # Rapport journalier
 
+Semaine 49 :
+
 27/11/23 :
 - Découverte du sujet 
 - Réalisation d'un DHCP server avec isc-dhcp-server
@@ -22,9 +24,12 @@
 - Reseau public modifié, translation d'IP privé public
 - Sauvegarde des routeurs et commutateurs
 
-
-
+Semaine 50 :
 
 11/12/23 : 
 - Scripts pour lancer les vagrants
 - Recherche d'un panel graphique (cluster kurbernetes)
+
+12/12/23 :
+- Script pour lancer l'infrastructure des machines vagrants
+- Documentation sur l'infrastructure
