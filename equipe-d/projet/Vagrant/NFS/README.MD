@@ -1,3 +1,5 @@
+@augustin Beeuwsaert
+
 ### Serveur NFS
 
 Le serveur NFS nous serviras à stocker les fichiers des utilisateurs. Chaque utilisateur disposera d'un dossier de session qui lui sera propre et qui sera créé la première fois qu'il se connecte au serveur LDAP. 

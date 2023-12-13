@@ -1,6 +1,6 @@
 @augustin Beeuwsaert
 
-### Serveur LDAP
+### Serveur WEB
 
 Voici la procédure complète pour l'installation du serveur WEB. Suivez attentivement ces étapes pour garantir une mise en place efficace.
 
@@ -8,7 +8,6 @@ Voici la procédure complète pour l'installation du serveur WEB. Suivez attenti
 
 Accédez au répertoire /Web et exécutez la commande suivante :
 
-Accédez au répertoire /Ldap et exécutez la commande suivante :
 
 ```
 vagrant up 
