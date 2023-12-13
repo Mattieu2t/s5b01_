@@ -1,0 +1,162 @@
+
+!
+! Last configuration change at 05:40:34 UTC Mon Jan 1 1900
+!
+version 15.4
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+memory-size iomem 10
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+cts logging verbose
+license udi pid CISCO881-K9 sn FCZ173591GZ
+license accept end user agreement
+license boot module c880-data level advipservices
+!
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ switchport trunk allowed vlan 1-5,21-23,1002-1005
+ switchport mode trunk
+ no ip address
+!
+interface FastEthernet1
+ switchport trunk allowed vlan 1-5,21-23,1002-1005
+ switchport mode trunk
+ no ip address
+!
+interface FastEthernet2
+ switchport trunk allowed vlan 1-5,23,1002-1005
+ switchport mode trunk
+ no ip address
+!
+interface FastEthernet3
+ no ip address
+!
+interface FastEthernet4
+ ip address 192.168.1.1 255.255.255.252
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan3
+ no ip address
+!
+interface Vlan21
+ ip address 192.168.21.1 255.255.255.0
+ ip access-group ALLOW_PING_21_22 in
+ ip helper-address 192.168.21.250
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface Vlan22
+ ip address 192.168.22.1 255.255.255.0
+ ip access-group ALLOW_PING_21_22 in
+ ip helper-address 192.168.21.250
+ ip virtual-reassembly in
+!
+interface Vlan23
+ ip address 192.168.23.1 255.255.255.0
+ ip access-group ALLOW_PING_FROM_23 in
+ ip helper-address 192.168.21.250
+ ip virtual-reassembly in
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.1.0
+ network 192.168.21.0
+ network 192.168.22.0
+ network 192.168.23.0
+ no auto-summary
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+ip nat inside source list 1 interface FastEthernet4 overload
+ip route 0.0.0.0 0.0.0.0 192.168.1.2
+!
+ip access-list extended ALLOW_PING_21_22
+ permit icmp 192.168.21.0 0.0.0.255 192.168.22.0 0.0.0.255
+ permit icmp 192.168.22.0 0.0.0.255 192.168.21.0 0.0.0.255
+ deny   icmp 192.168.21.0 0.0.0.255 192.168.23.0 0.0.0.255
+ deny   icmp 192.168.22.0 0.0.0.255 192.168.23.0 0.0.0.255
+ permit ip any any
+ip access-list extended ALLOW_PING_FROM_23
+ permit icmp 192.168.23.0 0.0.0.255 192.168.21.0 0.0.0.255
+ permit icmp 192.168.23.0 0.0.0.255 192.168.22.0 0.0.0.255
+ deny   icmp 192.168.21.0 0.0.0.255 192.168.22.0 0.0.0.255
+ permit ip any any
+!
+!
+tftp-server flash:r1-conf
+tftp-server flash:startup-config
+tftp-server flash:r1-config
+!
+control-plane
+!
+!
+!
+line con 0
+ no modem enable
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+!
+end
