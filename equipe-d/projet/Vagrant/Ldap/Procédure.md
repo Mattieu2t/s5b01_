@@ -2,31 +2,30 @@
 
 ### Serveur LDAP
 
-Voici la procédure pour réaliser l'instalation du serveur LDAP ainsi que le poste client
-Suivez bien la procédure étape par étape.
+Voici la procédure complète pour l'installation du serveur LDAP ainsi que la configuration du poste client. Suivez attentivement ces étapes pour garantir une mise en place efficace.
 
 
 # 1 Mise en place des machines 
 
-Ce rendre dans le dossier /Ldap et tapez la commande suivante :
+Accédez au répertoire /Ldap et exécutez la commande suivante :
 
 ```
 vagrant up 
 ```
-Une fois les machines mise en place, on peut ce connecter au serveur : 
+Une fois les machines mises en place, connectez-vous au serveur : 
 
 ```
 vagrant ssh ldap
 ```
-Vous etes maintenant connecter a la machine ldap qui va contenir notre serveur ! 
+Vous êtes désormais connecté à la machine LDAP, qui abritera notre serveur ! 
 
 # 2 Instalation du serveur ldap  
-Une fois sur celle ci rendez-vous dans le dossier /conf et lancer le script **conf.sh** avec la commande suivant :
+Dirigez-vous vers le dossier /conf et lancez le script **conf.sh** avec la commande suivante :
 
 ```
 sh conf.sh
 ```
-Une fois le script lancer suivez attentivement les étapes qui vont suivre. 
+Suivez attentivement les étapes du script. Au début, on vous demandera un mot de passe root. Laissez les champs vides.
 
 Au début on nous demande un mot de passe root. Laissez les camps vide. 
 
@@ -34,38 +33,38 @@ Au début on nous demande un mot de passe root. Laissez les camps vide.
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/2.png "wizard ldap")
 
-Mettez le nom de domaine de votre organisation. Ici c'est **techtonic.iut**
+Indiquez le nom de domaine de votre organisation, par exemple, **techtonic.iut**.
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/3.png "wizard ldap")
 
-Mettez le nom de votre organisation. Ici **techtonic**
+Spécifiez le nom de votre organisation, ici **techtonic**.
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/4.png "wizard ldap")
 
- Entrez le mot de passe root pour le serveur LDAP
+ Entrez le mot de passe root pour le serveur LDAP.
  
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/5.png "wizard ldap")
 
-Puis ensuite suivez les étapes comme ci dessous :
+Suivez ensuite les étapes comme illustré ci-dessous :
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/6.png "wizard ldap")
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/7.png "wizard ldap")
 
-Ajouter les utilisateurs : 
+Ajoutez les utilisateurs : 
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/8.png "wizard ldap")
 
-Voila vous avez installer le serveur ldap !
+Vous avez maintenant installé le serveur LDAP avec succès !
 
-# 3 Instalation du poste client ldap  
+# 3 Installation du poste client ldap  
 
-Connectez vous a votre machine cliente 
+Connectez-vous à votre machine cliente :
 
 ```
 vagrant ssh client
 ```
-Une fois cela fait il va faloir instaler les clients ldap :
+Ensuite, installez les clients LDAP :
 
 ```
 sudo apt install libnss-ldap libpam-ldap ldap-utils 
@@ -95,15 +94,13 @@ Redémarez le service :
 sudo systemctl restart nscd.service
 ```
 
-# 4 Connection à un utilisatuer depuis un poste client 
+# 4 Connexion à un utilisateur depuis un poste client 
 
-Pour vous connecter a un utilisateur depuis un poste client, vous devez réaliser la comande suivante 
-: 
+Pour vous connecter à un utilisateur depuis un poste client, exécutez la commande suivante :
 
 ```
 su - {nom de l'utilisateur}
 ```
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/13.png "wizard ldap")
 
-Voila vous etes connecter a votre utilisateur présent sur le serveur ldap ! 
-On peut bien voir que l'utilisateur possède bien un **/home/user** a la création de la session. 
+Vous êtes maintenant connecté à votre utilisateur présent sur le serveur LDAP ! Vous pouvez constater que l'utilisateur possède bien un répertoire **/home/user** lors de la création de la session.
