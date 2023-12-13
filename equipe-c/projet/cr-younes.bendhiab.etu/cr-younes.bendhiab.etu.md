@@ -1,5 +1,7 @@
 # <center> Rapport journalier </center>
 
+## Semaine 48
+
 ## 27-11-2023
 
 ### LDAP
@@ -32,3 +34,18 @@
 
 - Commencé à documenter et à installer le cache-proxy "Squid"
 - Encore essayé de faire fonctionner un client LDAP (ne marche toujours pas, je verrais la semaine prochaine avec le cours de monsieur Hauspie).
+
+## Semaine 50
+
+## 11-12-2023
+
+- Refonte de l'arbre LDAP + documentation. N'a pas réussi à faire fonctionner PAM (cours arrive la semaine prochaine).
+
+![Schéma LDAP New](ldap2.drawio.svg)
+
+## 12-12-2023
+
+- Réussi à faire fonctionner une connexion contre le serveur LDAP. LDAP logiquement terminé.
+- Finition de la documentation pour le proxy.
+
+## 13-12-2023

@@ -1,0 +1,14 @@
+$TTL 86400
+@       IN      SOA     techtonic.iut. admin.techtonic.iut. (
+                1	        ; Serial
+                3600        ; Refresh
+                1800        ; Retry
+                604800      ; Expire
+                86400 )     ; Minimum TTL
+;
+@       IN      NS      techtonic.iut.
+@	IN	A	10.10.10.18
+mail	IN	A	10.10.10.18
+router	IN	A	10.10.10.17
+ns	IN	A	10.10.10.18
+dhcp	IN	A	192.168.12.254

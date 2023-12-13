@@ -27,10 +27,10 @@ subtitle: SYSSKO
 Au niveau de la sécurité, aucun serveur ne doit ping le public sauf si il est nécessaire (web, mail…) avec un Fail2Ban sur les différents services publics..
 
 ## Organisation des réseaux 
- - 1 réseau public
+   - 1 réseau public
    - Serveur web
    - Serveur mail
- - 3 réseau privé
+   - 3 réseau privé
    - Service info
    - Service administratif
    - Service production (public)
@@ -55,3 +55,9 @@ Infos supplémentaires :
 | Administratif     | 192.168.70.20     | 255.255.255.0         | PC2-A              | Machine pour les salariés |
 | Production        | 192.168.80.10     | 255.255.255.0         | PC1-P              | Machine pour les salariés |
 | Production        | 192.168.80.20     | 255.255.255.0         | PC2-P              | Machine pour les salariés |
+
+# Schéma du brachement et des VMs
+![image](doc/images/diagram-reseau.png)
+
+# Brachement sur les machines
+![image-machine](doc/images/cablage_machine.jpg)

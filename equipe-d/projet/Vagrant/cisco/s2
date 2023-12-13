@@ -1,0 +1,194 @@
+
+!
+! Last configuration change at 00:00:40 UTC Mon Mar 1 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname S2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3536397696
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3536397696
+ revocation-check none
+ rsakeypair TP-self-signed-3536397696
+!
+!
+crypto pki certificate chain TP-self-signed-3536397696
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33353336 33393736 3936301E 170D3933 30333031 30303030 
+  35355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 35333633 
+  39373639 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100EFAF B7CC2850 C65383B5 E63FDC48 B2F7047B EBA72107 61515FB9 039E77F5 
+  B20B2257 ABB70428 4524891C A467C2CB 566AEE73 4842B3AF 67374398 91B22297 
+  13C337ED 3B79AE4E 2D8B2E0C 2DA250DF 398BAB27 CD5BE929 B7DE14C7 17CA6DFB 
+  000BB9F4 A0FD7B8A 980F98E9 CAC5DBAF EBA84B74 4D0C4B2D 31A01709 87211244 
+  32910203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 142E419C 0C908711 9FD67259 F12C47F2 334A2057 B8301D06 
+  03551D0E 04160414 2E419C0C 9087119F D67259F1 2C47F233 4A2057B8 300D0609 
+  2A864886 F70D0101 05050003 81810010 DFE3E7A8 9348B097 F36452E7 8AB7749E 
+  FD9B0A60 49382A1E 312C0CBD 44307E42 B9CE6CAC B73770F2 51935481 ADB5C8DC 
+  B37748B0 DB98FD68 85C4A0DD 8723ACC9 37C17CF8 2B38A376 8DE7A810 6B382879 
+  7913AA9B F4CA081A D3355348 41E7F33C 4D130F2A 23032104 57419FA0 FA8B8F52 
+  9D2D9777 344BABC1 A3D6F1FD 880E22
+  	quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 12
+ name Informatique
+!
+vlan 13
+ name Administration
+!
+vlan 14
+ name Production
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/24
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan12
+ ip address 192.168.12.2 255.255.255.0
+!
+ip http server
+ip http secure-server
+!
+!
+!
+line con 0
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end

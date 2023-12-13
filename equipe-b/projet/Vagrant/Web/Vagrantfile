@@ -2,14 +2,14 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "debian/bookworm64"
      
-    config.vm.define "labradorite" do |labradorite|
-	labradorite.vm.hostname = "labradorite"
-	labradorite.vm.network "forwarded_port", guest: 80, host: 8081
-	#labradorite.vm.network "private_network", ip: "192.168.60.2"
-	labradorite.vm.network "public_network", bridge: "enp1s2", ip: "10.14.0.4"	
-	labradorite.vm.synced_folder "./conf", "/home/vagrant/conf" 
+    config.vm.define "Peridot" do |Peridot|
+	Péridot.vm.hostname = "labradorite"
+	Péridot.vm.network "forwarded_port", guest: 80, host: 8081
+	#Péridot.vm.network "private_network", ip: "192.168.60.2"
+	Péridot.vm.network "public_network", bridge: "enp1s2", ip: "10.10.10.11"	
+	Péridot.vm.synced_folder "./conf", "/home/vagrant/conf" 
 	
-	labradorite.vm.provision "shell",
+	Péridot.vm.provision "shell",
 	inline: <<-SHELL
 		apt-get update
         apt-get -y upgrade

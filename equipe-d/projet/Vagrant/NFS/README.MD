@@ -6,7 +6,6 @@ Nous avons décidé que les dossiers de session seront stockés dans le repertoi
 
 Le serveur NFS sera disponible sur la plage d'adresse `192.168.0.0/16`.
 
-
 Vérifier que le partage est fonctionel : 
 
     $ exportfs

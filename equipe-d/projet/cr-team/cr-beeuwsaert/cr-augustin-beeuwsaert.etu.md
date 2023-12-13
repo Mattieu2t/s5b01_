@@ -46,3 +46,21 @@
 3. Getter pour srv mail
 
 
+### 31/11/23 :
+
+1. Mise en commun avec martin pour touver un lien a mettre en place avec ldap et nfs 
+
+
+## Semaine 50
+
+### 11/12/23 :
+
+1. Mise en commun avec le group (qui a fait quoi)
+2. Ce qu'il reste a faire ?
+3. Ldap -> j'ai un probleme avec le script + je ne trouve pas comment me connecter depuis une machine cleinte.
+
+
+### 12/12/23 :
+
+1. Mise en place du client ldap 
+2. Test plus dernier réglage 

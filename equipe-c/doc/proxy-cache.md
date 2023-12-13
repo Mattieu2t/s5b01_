@@ -14,7 +14,9 @@ Ce serveur cache se place sur le réseau privé des utilisateurs faisant parti �
 
 De cette manière, tout les utilisateurs d'un même réseau passent par un proxy cache. Les fichiers téléchargés par un utilisateur sont enregistrés dans le cache proxy. Si un autre utilisateur demande les mêmes fichiers, ils seront récupérés depuis le cache proxy permettant un accès plus rapide pour les utilisateurs.
 
-![Schéma cache-proxy](images/cache-proxy.svg)
+| ![Schéma cache-proxy](images/cache-proxy-schema.svg) | 
+|:--:| 
+| *Image simplifiée du réseau intégrant le proxy* |
 
 ## Installation de Squid
 
@@ -106,3 +108,11 @@ Voici une liste des directives utilisés par défaut et leur utilitées:
     Les directives refresh_pattern définissent les règles pour déterminer si un fichier est considéré comme "frais" ou "périmé". Un fichier "périmé" est retiré du cache.
 
     Les directives acl et http_access permettent d'autoriser ou d'interdire les connexions HTTP.
+
+Il n'y a aucune spécification sur les restrictions qu'il devrait y avoir pour le proxy, on va donc laisser les paramètres par défaut donnés par Squid.
+
+Il faudra par la suite changer le proxy web des différents utilisateurs en l'ajoutant sur leur navigateur web:
+
+| ![Schéma cache-proxy](images/web.png) | 
+|:--:| 
+| *Changement du proxy à partir du navigateur web* |

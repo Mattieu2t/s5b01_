@@ -1,0 +1,109 @@
+
+!
+version 15.1
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+memory-size iomem 10
+crypto pki token default removal timeout 0
+!
+!
+ip source-route
+!
+!
+!
+!
+!
+ip cef
+ip name-server 10.10.10.3
+no ipv6 cef
+!
+!
+license udi pid CISCO881-K9 sn FCZ1509C4WH
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ switchport mode trunk
+!
+interface FastEthernet1
+ switchport mode trunk
+!
+interface FastEthernet2
+ switchport mode trunk
+!
+interface FastEthernet3
+ switchport mode trunk
+!
+interface FastEthernet4
+ ip address 10.10.10.17 255.255.255.248
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan12
+ ip address 192.168.12.1 255.255.255.0
+ ip helper-address 192.168.12.254
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface Vlan13
+ ip address 192.168.13.1 255.255.255.0
+ ip helper-address 192.168.12.254
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface Vlan14
+ ip address 192.168.14.1 255.255.255.0
+ ip helper-address 192.168.12.254
+ ip nat inside
+ ip virtual-reassembly in
+!
+ip default-gateway 10.10.10.22
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+ip nat inside source list 50 interface FastEthernet4 overload
+ip route 0.0.0.0 0.0.0.0 10.10.10.22
+!
+logging esm config
+access-list 50 permit 192.168.0.0 0.0.255.255
+!
+!
+!
+!
+tftp-server flash:running-config 1
+!
+line con 0
+ no modem enable
+line aux 0
+line vty 0 4
+ login
+ transport input all
+!
+end
