@@ -49,3 +49,8 @@
 - Finition de la documentation pour le proxy.
 
 ## 13-12-2023
+
+- Test de l'automatisation de l'installation d'un serveur ldap et d'un client (ne marche pas pour l'instant, n'arrive pas à changer le mot de passe).
+- Mise en place NFS, problème de montage sur le home directory. On montera donc le /home dans un autre répértoire (du type "nfs_home").
+
+## 14-12-2023
