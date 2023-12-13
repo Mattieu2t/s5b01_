@@ -42,7 +42,11 @@ Mettez le nom de votre organisation. Ici **techtonic**
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/4.png "wizard ldap")
 
+ Entrez le mot de passe root pour le serveur LDAP
+ 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/5.png "wizard ldap")
+
+Puis ensuite suivez les étapes comme ci dessous :
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/6.png "wizard ldap")
 
@@ -66,17 +70,23 @@ Une fois cela fait il va faloir instaler les clients ldap :
 ```
 sudo apt install libnss-ldap libpam-ldap ldap-utils 
 ```
-Comme pour le serveur il va falloir réaliser une configuration graphique. Voici les différentes étapes a réaliser :
+Configurez l'URI de votre serveur LDAP. Le format du serveur est également affiché dans l'image suivante. Ensuite, appuyez sur la touche Entrée pour passer à la configuration suivante.
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/9.png "wizard ldap")
+
+Vous allez maintenant définir un nom distinct pour la base de recherche LDAP. Un exemple est présenté dans l'image ci-dessous. Ensuite, appuyez sur la touche Entrée pour passer à l'écran suivant.
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/10.png "wizard ldap")
 
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/11.png "wizard ldap")
 
+Ensuite, configurez votre système Debian 10 pour utiliser LDAP pour l'authentification. Pour ce faire, mettez à jour les configurations PAM en exécutant la commande suivante :
 ```
 sudo pam-auth-update
 ```
+
+Cette commande affichera une boîte de dialogue sur votre écran à partir de laquelle vous pourrez sélectionner les profils souhaités que vous souhaitez activer.
+
 ![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/12.png "wizard ldap")
 
 Redémarez le service : 
