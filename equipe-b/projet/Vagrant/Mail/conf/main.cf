@@ -33,7 +33,7 @@ myorigin = $mydomain
 
 mydestination = $myhostname, $mydomain, localhost.$mydomain, localhost
 relayhost = 
-mynetworks = 127.0.0.0/8, 192.168.60.42/24
+mynetworks = 127.0.0.0/8, 10.10.0.0/16
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
