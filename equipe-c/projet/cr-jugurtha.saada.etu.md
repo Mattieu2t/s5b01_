@@ -32,11 +32,11 @@ subtitle: Equipe C - Capsule Corp.
 ### Interfaces sur R2 :
 | **Interface**  | **Port**  | **IP /Masque** |
 |----------------|-------------|----------------|
-| `FastEthernet 0`   | XXXX  | XX.XX.XX.XX /XX   |
-| `FastEthernet 1`   | vlan5 | 192.168.2.3 /24   |
-| `FastEthernet 2`   | vlan2 | 192.168.3.4 /29   |
+| `FastEthernet 0`   | vlan10  | 192.168.4.1 /24   |
+| `FastEthernet 1`   | XXXX | XX.XX.XX.XX /XX   |
+| `FastEthernet 2`   | XXXX | XX.XX.XX.XX /XX   |
 | `FastEthernet 3`   | vlan3 | 192.168.1.2 /24   |
-| `FastEthernet 4`   | WLAN | 10.10.10.2 /16 - dhcp |
+| `FastEthernet 4`   | WLAN | 10.10.10.13 /29 |
 
 # <center>Semaine 46 (13/11 au 17/11) :</center>
 
@@ -44,13 +44,57 @@ subtitle: Equipe C - Capsule Corp.
 
 # <center>Semaine 48 (27/11 au 01/12) :</center>
 
+Lundi:
 - Pris en compte enfin du vrai sujet
 - Mise en place du Markdown individuel
-- Installation d'un serveur dhcp avec isc-dhcp-server
+
+Mardi:
+- Installation d'un serveur dhcp avec isc-dhcp-server sur douglas14
+
+Mercredi:
+- Déinstallation du firewall raspberry qui bloquer tout le traffic
+- Installation du service dns en local sur douglas14
+
+Jeudi:
+- Mise en place du service dns sur le réseau public avec l'ip 10.10.10.10 sur douglas14
+- Configuration du serveur dns pour être accessible depuis l'exterieur
+
+Vendredi: 
+- Installation d'un service web (apache2) sur le réseau public
+- Documentation de toute la semaine
+- Backup des routeurs, switchs et machine vagrant (tftp)
+
+### Services :
+| **Nom**  | **Machine**  | **IP /Masque** |
+|----------------|-------------|----------------|
+| `DHCP`   | douglas14 - vagrant  | 192.168.21.250 /24   |
+| `DNS`   | douglas16 - vagrant | 192.168.4.2 /24 & 10.10.10.10 /29   |
+| `Web`   | douglas16 - vagrant | 192.168.4.2 /24 & 10.10.10.10 /29   |
+
+### Schématiation sur Packet Tracer
+![image](https://cdn.discordapp.com/attachments/687337171434078244/1180099311028142140/Capture_decran_2023-12-01_a_11.51.53.png?ex=657c3020&is=6569bb20&hm=535173918b8d67cb489b3b51b2c34d819f04a839a94bd9628a7913126ef07dcc&)
+
+### Etat de la baie :
+![image](https://cdn.discordapp.com/attachments/687337171434078244/1180096671867224225/IMG_9139.jpg?ex=657c2dab&is=6569b8ab&hm=67a835fd2d859145a21db3f46c9a93cef09cdda5cb2a8c7829676f75e36b51b1&)
 
 # <center>Semaine 50 (11/12 au 15/12) :</center>
 
-- Rien 
 
+Lundi:
+- Mise en place du serveur mail sous docker
+
+Mardi:
+- Reflexion d'une mise en place d'un plan de reprise d'activité (docker ?)
+- Reflexion d'un système de gestion des equipements réseaux
+- Script pour up en même temps les services DHCP et DNS sur les douglas
+
+Mercredi:
+- Finalisation du DNS & DNS Dynamique & DNS Resolver sur l'ip 10.10.10.10
+- Mise en place du service web sur un raspberry sur l'ip 10.10.10.11 & http://capsule.iut/
+- Mise en place du service mail sur le meme rapsberry sur l'ip 10.10.10.11 & http://mail.capsule.iut/ avec Postfix (admin) et Dovecot (save) et Rainloop (gestion)
+
+Jeudi:
+
+Vendredi: 
 
 
