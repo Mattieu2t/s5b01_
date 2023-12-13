@@ -97,13 +97,4 @@ Jeudi:
 
 Vendredi: 
 
-### Services :
-| **Nom**  | **Machine**  | **IP /Masque** |
-|----------------|-------------|----------------|
-| `DHCP`   | douglas14 - vagrant  | 192.168.21.250 /24   |
-| `Firewall`   | douglas15 - vagrant  | 192.168.2.2 /24   |
-| `DNS`   | douglas16 - vagrant | 192.168.4.2 /24 & 10.10.10.10 /29   |
-| `Web`   | Raspberry | 192.168.4.5 /24 & 10.10.10.10 /29   |
-| `Mail`   | Raspberry | 192.168.4.5 /24 & 10.10.10.10 /29   |
-
 
