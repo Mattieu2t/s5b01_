@@ -1,0 +1,9 @@
+$TTL 10800;
+public.capsule.iut. IN SOA ns.public.capsule.iut. root.public.capsule.iut.(
+1 ; Serial
+1D ; Refresh
+2H ; Retry
+7D ; Expire
+1H ) ; Cache TTL
+@ IN NS ns.public.capsule.iut.
+ns.public.capsule.iut. IN A 192.168.4.2

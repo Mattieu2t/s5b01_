@@ -1,0 +1,17 @@
+$TTL 10800;
+capsule.iut. IN SOA capsule.iut. admin.capsule.iut.(
+1 ; Serial
+1D ; Refresh
+2H ; Retry
+7D ; Expire
+1H ) ; Cache TTL
+
+@     IN   NS  capsule.iut.
+
+@     IN   A   192.168.4.2
+@     IN   A   10.10.10.10
+
+mail  IN   A   192.168.4.2
+mail  IN   A   10.10.10.10
+
+@     IN   MX  10 mail.capsule.iut.

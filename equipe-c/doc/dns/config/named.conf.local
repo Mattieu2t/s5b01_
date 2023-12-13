@@ -1,0 +1,28 @@
+include "/etc/bind/rndc.key";
+
+zone "capsule.iut" IN {
+        type master;
+        file "/var/lib/bind/db.capsule";
+        allow-update { key "cle"; };
+};
+
+zone "public.capsule.iut" IN {
+        type master;
+        file "/var/lib/bind/db.public";
+        allow-update { key "cle";  };
+};
+zone "admin.capsule.iut" IN {
+        type master;
+        file "/var/lib/bind/db.admin";
+        allow-update { key "cle";  };
+};
+zone "info.capsule.iut" IN {
+        type master;
+        file "/var/lib/bind/db.info";
+        allow-update { key "cle";  };
+};
+zone "prod.capsule.iut" IN {
+        type master;
+        file "/var/lib/bind/db.prod";
+        allow-update { key "cle"; };
+};

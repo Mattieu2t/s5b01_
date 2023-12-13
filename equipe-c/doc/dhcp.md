@@ -64,7 +64,7 @@ Vous avez juste a modifier les fichier dhcpd.conf et isc-dhcp-server :
 
 Le fichier dhcpd.conf contient les informations de sous réseau pour l'attribution des machines.
 
-La mise en place d'un pool d'adresse d'un sous réseau s'effectue comme ceci : 
+La mise en place d'un `pool` d'adresse d'un sous réseau s'effectue comme ceci : 
 
 ```
 subnet 192.168.21.0 netmask 255.255.255.0 {
@@ -113,11 +113,28 @@ subnet 192.168.21.0 netmask 255.255.255.0 {
 
 Ici nous avons ajouté différentes options : 
 
-option domain-name : permet de spécifier le nom de domaine des machines sur ce sous-réseau
+`option domain-name` : permet de spécifier le nom de domaine des machines sur ce sous-réseau
 
-option domain-name-servers : permet de spécifier l'adresse IP du serveur DNS
+`option domain-name-servers` : permet de spécifier l'adresse IP du serveur DNS
 
-zone  permet de définir la zone DNS a mettre à jour.
+`zone info.capsule.iut.` permet de définir la zone DNS a mettre à jour.
+
+## Commande d'initialisation 
+
+Vous pouvez lancer votre serveur dhcp a l'aide de cette commande :
+
+    cisco@douglasXX:~/dhcp$ vagrant up
+
+
+Une fois la machine lancée vous pouvez vous y connecter et voir le status de votre serveur DHCP à l'aide de la commande suivant :
+    
+    cisco@douglasXX:~/dhcp$ vagrant ssh dhcp
+    vagrant@dhcp:$ sudo systemctl status isc-dhcp-server
+
+Si vous effectuez des modifications dans votre serveur DHCP vous pouvez redémarrer le service isc-dhcp-server à l'aide de la commande suivante :
+
+    vagrant@dhcp:$ sudo systemctl restart isc-dhcp-server
+
 
 ----
 
@@ -125,15 +142,3 @@ Retrouvez la configuration complète de `dhcpd.conf` [ici](dhcp-nfs/config/dhcpd
 Retrouvez la configuration complète de `isc-dhcp-server` [ici](dhcp-nfs/config/isc-dhcp-server)
 
 ---
-
-Vous pouvez lancer votre serveur dhcp a l'aide de cette commande :
-
-    cisco@douglasXX:~/dhcp$ vagrant up
-
-Une fois la machine lancée vous pouvez voir le status de votre serveur DHCP à l'aide de la commande suivant :
-
-    root@dhcp:$ systemctl status isc-dhcp-server
-
-Si vous effectuez des modifications dans votre serveur DHCP vous pouvez redémarrer le service isc-dhcp-server à l'aide de la commande suivante :
-
-    root@dhcp:$ systemctl restart isc-dhcp-server
