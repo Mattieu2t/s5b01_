@@ -138,7 +138,7 @@ Si vous effectuez des modifications dans votre serveur DHCP vous pouvez redémar
 
 ----
 
-Retrouvez la configuration complète de `dhcpd.conf` [ici](dhcp-nfs/config/dhcp/dhcpd.conf)  
-Retrouvez la configuration complète de `isc-dhcp-server` [ici](dhcp-nfs/config/dhcp/isc-dhcp-server)
+Configuration complète de [`dhcpd.conf`](dhcp-nfs/config/dhcp/dhcpd.conf)  
+Configuration complète de [`isc-dhcp-server`](dhcp-nfs/config/dhcp/isc-dhcp-server)
 
 ---
