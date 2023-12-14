@@ -1,0 +1,45 @@
+Vagrant.configure("2") do |config|
+
+	config.vm.define "carbonadeFlamande" do |carbonadeFlamande|
+		carbonadeFlamande.vm.box = "debian/bookworm64"
+		carbonadeFlamande.vm.provider :virtualbox do |vb|
+  			vb.gui = true
+		end
+		
+		carbonadeFlamande.vm.provider "virtualbox" do |v|
+			v.memory = 2048
+		end			
+
+		carbonadeFlamande.vm.hostname = "carbonadeFlamande"
+	
+		carbonadeFlamande.vm.provision "shell", inline: <<-EOF
+			apt update && sudo apt upgrade
+			apt install -y task-xfce-desktop
+			apt-get install -y virtualbox-guest-x11
+			apt-get install -y firefox-esr thunderbird
+			reboot	
+		EOF
+	end
+
+	config.vm.define "moulesFrites" do |moulesFrites|
+		moulesFrites.vm.box = "debian/bookworm64"
+		moulesFrites.vm.provider :virtualbox do |vb|
+  			vb.gui = true
+		end
+		
+		moulesFrites.vm.provider "virtualbox" do |v|
+			v.memory = 2048
+		end			
+
+		moulesFrites.vm.hostname = "moulesFrites"
+	
+		moulesFrites.vm.provision "shell", inline: <<-EOF
+			apt update && sudo apt upgrade
+			apt install -y task-xfce-desktop
+			apt-get install -y virtualbox-guest-x11
+			apt-get install -y firefox-esr thunderbird
+			reboot	
+		EOF
+	end
+
+end
