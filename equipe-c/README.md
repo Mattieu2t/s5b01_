@@ -18,18 +18,40 @@ DNS : capsule.iut
 # Plages d'adresse IP :
 
 - 10.10.10.9 - .14
-- Gateway = 10.10.10.14
+- IP Publique = 10.10.10.13 /29
+- Gateway = 10.10.10.14 /29
+
+# Nom de domaine :
+| **Domaine**         | **IP /Masque**                    |
+|--------------------|-----------------------------------|
+| `capsule.iut`      | 192.168.4.5 /24 & 10.10.10.11 /29 |
+| `ns.capsule.iut`   | 192.168.4.2 /24 & 10.10.10.10 /29 |
+| `mail.capsule.iut` | 192.168.4.5 /24 & 10.10.10.11 /29 |
+| `proxy.capsule.iut`| 192.168.21.10 /24                 |
 
 # Services :
 | **Nom**     | **Machine**          | **IP /Masque**                      |
 |-------------|----------------------|-------------------------------------|
 | `DHCP`      | douglas14 - vagrant  | 192.168.21.250 /24                  |
-| `Firewall`  | douglas15 - vagrant  | 192.168.2.2 /24                     |
-| `ProxyWeb`  | douglas15 - vagrant  | 192.168.23.10 /24                   |
+| `Firewall`  | XXXXXXXXX - vagrant  | XX.XX.XX.XX /XX                     |
+| `ProxyWeb`  | douglas14 - vagrant  | 192.168.21.10 /24                   |
 | `DNS`       | douglas16 - vagrant  | 192.168.4.2 /24 & 10.10.10.10 /29   |
 | `Web`       | Raspberry            | 192.168.4.5 /24 & 10.10.10.11 /29   |
 | `Mail`      | Raspberry            | 192.168.4.5 /24 & 10.10.10.11 /29   |
 
+## Site Web (Apache2)
+![image](https://media.discordapp.net/attachments/687337171434078244/1184872900692557874/Capture_du_2023-12-14_11-20-41.png)
+
+## Mail - Panel de gestion (postfixadmin)
+![image](https://media.discordapp.net/attachments/687337171434078244/1184872899765616660/Capture_du_2023-12-14_11-35-26.png)
+![image](https://media.discordapp.net/attachments/687337171434078244/1184872899509768302/Capture_du_2023-12-14_11-35-46.png)
+
+## Mail - Gestion utilisateur (rainloop)
+
+![image](https://media.discordapp.net/attachments/687337171434078244/1184872900268937296/Capture_du_2023-12-14_11-34-34.png)
+![image](https://media.discordapp.net/attachments/687337171434078244/1184872900025659523/Capture_du_2023-12-14_11-35-01.png)
+
+---
 
 # Intermédiaire du groupe :
 
