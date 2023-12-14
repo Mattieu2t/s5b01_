@@ -51,6 +51,7 @@ DNS : capsule.iut
 ![image](https://media.discordapp.net/attachments/687337171434078244/1184872900268937296/Capture_du_2023-12-14_11-34-34.png)
 ![image](https://media.discordapp.net/attachments/687337171434078244/1184872900025659523/Capture_du_2023-12-14_11-35-01.png)
 
+
 ---
 
 # Intermédiaire du groupe :
