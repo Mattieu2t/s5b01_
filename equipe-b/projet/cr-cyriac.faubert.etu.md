@@ -17,6 +17,8 @@
  - Verification de comment synchroniser LDAP et NFS (ou autre service)
  - Mise en forme des documentations
  - Mise en place de la machine IPTables
+ - Routage sur les R1 et R2
+ - On a cassé Douglas (plus d'espace, plus de réseau après reboot, merci Vagrant)
 
 # Notes :
  - Utiliser "Squid" pour le proxy pour les machines et l'accès à internet

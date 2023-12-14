@@ -42,10 +42,10 @@ Infos supplémentaires :
 
 | Réseau            | Adresse IP        | Masque de Sous-réseau | Nom de la Machine  | Utilité                   |
 |-------------------|-------------------|-----------------------|--------------------|---------------------------|
-| Public            | 10.10.10.9        | 255.255.0.0           | Kyanite            | DNS                       |
-| Public            | 10.10.10.10       | 255.255.0.0           | Topaze             | Email                     |
-| Public            | 10.10.10.11       | 255.255.0.0           | Péridot            | Web                       |
-| Public            | 10.10.10.12       | 255.255.0.0           | Quartz             | Firewall                  |
+| Public            | 10.10.10.25       | 255.255.255.248       | Kyanite            | DNS                       |
+| Public            | 10.10.10.26       | 255.255.255.248       | Topaze             | Email                     |
+| Public            | 10.10.10.27       | 255.255.255.248       | Péridot            | Web                       |
+| Public            | 10.10.10.28       | 255.255.255.248       | Quartz             | Firewall                  |
 | Informatique      | 192.168.60.10     | 255.255.255.0         | Labradorite        | DHCP                      |
 | Informatique      | 192.168.60.20     | 255.255.255.0         | Opale              | LDAP                      |
 | Informatique      | 192.168.60.30     | 255.255.255.0         | Iolite             | NFS                       |
