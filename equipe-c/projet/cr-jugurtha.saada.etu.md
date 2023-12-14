@@ -89,12 +89,23 @@ Mardi:
 - Script pour up en même temps les services DHCP et DNS sur les douglas
 
 Mercredi:
-- Finalisation du DNS & DNS Dynamique & DNS Resolver sur l'ip 10.10.10.10
+- Finalisation du DNS & DNS Dynamique & DNS Resolver sur l'ip 10.10.10.10 (Translation NAT sur 192.168.4.2)
 - Mise en place du service web sur un raspberry sur l'ip 10.10.10.11 & http://capsule.iut/
 - Mise en place du service mail sur le meme rapsberry sur l'ip 10.10.10.11 & http://mail.capsule.iut/ avec Postfix (admin) et Dovecot (save) et Rainloop (gestion)
 
 Jeudi:
+- Tentative de mise en place d'un pare feu avec pfsense (annulé)
+- Mise en place du proxy web pour le service production avec nginx :
+On voit ici que le curl passe bien par le proxy en 192.168.23.10 
+avant d'aller sur internet depuis un pc prod
+![image](https://media.discordapp.net/attachments/687337171434078244/1184876890943651911/Capture_du_2023-12-14_15-00-23.png)
+
+- Filtrage des packets des services info et admin vers production : 
+On voit que les ping depuis Info vers Production sont bloqués par le routeur
+![image](https://media.discordapp.net/attachments/687337171434078244/1184876890708774932/unnamed.png)
 
 Vendredi: 
 
 
+### Etat de la baie :
+![image](https://cdn.discordapp.com/attachments/687337171434078244/1184875424413663282/IMG_9249.jpg)
