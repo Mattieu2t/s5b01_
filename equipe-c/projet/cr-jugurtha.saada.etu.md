@@ -106,6 +106,5 @@ On voit que les ping depuis Info vers Production sont bloqués par le routeur
 
 Vendredi: 
 
-
 ### Etat de la baie :
 ![image](https://cdn.discordapp.com/attachments/687337171434078244/1184875424413663282/IMG_9249.jpg)
