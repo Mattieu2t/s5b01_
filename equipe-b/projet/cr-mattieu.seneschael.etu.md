@@ -9,3 +9,4 @@
 - update LDAP
 - ajout doc pour les fichiers vagrantfile
 - firewall
+- config routeur et switch
