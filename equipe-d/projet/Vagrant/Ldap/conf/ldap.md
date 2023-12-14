@@ -43,7 +43,7 @@ gecos: Augustin Beeuwsaert
 givenName: Augustin
 sn: BEEUWSAERT
 uidNumber: 10001
-mail: augustin.beeuwsaert.etu@univ-lille.fr
+mail: augustin.beeuwsaert.etu@techtonic.iut
 employeeNumber: 42133304
 employeeType: 100915772
 departmentNumber: {UAI:0597239Y}3BFQDV-123
