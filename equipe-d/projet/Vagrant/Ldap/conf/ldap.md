@@ -55,3 +55,45 @@ objectClass: organizationalPerson
 objectClass: inetOrgPerson
 gidNumber: 1005
 homeDirectory: /home/admin/augustin.beeuwsaert.etu
+
+
+dn: uid=mohamed.gazih.etu,ou=users,ou=admin,dc=univ-lille,dc=fr
+uid: mohamed.gazih.etu
+cn: Gazih Mohamed
+gecos: Mohamed Gazih 
+givenName: Mohamed
+sn: GAZIH
+uidNumber: 10001
+mail: mohamed.gazhi.etu@techtonic.iut
+employeeNumber: 42133304
+employeeType: 100915772
+departmentNumber: {UAI:0597239Y}3BFQDV-123
+objectClass: top
+objectClass: person
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+gidNumber: 1005
+homeDirectory: /home/admin/mohamed.gazhi.etu
+
+
+dn: uid=martin.rigeaux.etu,ou=users,ou=admin,dc=univ-lille,dc=fr
+uid: martin.rigeaux.etu
+cn: Rigeaux Martin
+gecos: Martin Rigeaux 
+givenName: Martin
+sn: Rigeaux
+uidNumber: 10001
+mail: martin.rigeaux.etu@techtonic.iut
+employeeNumber: 42133304
+employeeType: 100915772
+departmentNumber: {UAI:0597239Y}3BFQDV-123
+objectClass: top
+objectClass: person
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+gidNumber: 1005
+homeDirectory: /home/admin/martin.rigeaux.etu
