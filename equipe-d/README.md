@@ -30,6 +30,7 @@ Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objecti
 | Public            | 10.10.10.10       | 255.255.255.0         | Douglas05          | Mail                      |
 | Public            | 10.10.10.17       | 255.255.255.249       | Douglas05          | Web                       |
 | Public            | 10.10.10.19       | 255.255.255.0         | Douglas05          | Firewall                  |
+| Privé             | 192.168.0.1       | 255.255.0.0           | Douglas05          | Firewall                  |
 | Privé             | 192.168.12.254    | 255.255.255.0         | Douglas05          | DHCP                      |
 | Privé             | 192.168.12.252    | 255.255.255.0         | Douglas05          | LDAP                      |
 | Privé             | 192.168.12.253    | 255.255.255.0         | Douglas05          | NFS                       |
