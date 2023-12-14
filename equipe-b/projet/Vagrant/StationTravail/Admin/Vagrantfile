@@ -1,0 +1,45 @@
+Vagrant.configure("2") do |config|
+
+	config.vm.define "fricadelle" do |fricadelle|
+		fricadelle.vm.box = "debian/bookworm64"
+		fricadelle.vm.provider :virtualbox do |vb|
+  			vb.gui = true
+		end
+		
+		fricadelle.vm.provider "virtualbox" do |v|
+			v.memory = 2048
+		end			
+
+		fricadelle.vm.hostname = "fricadelle"
+	
+		fricadelle.vm.provision "shell", inline: <<-EOF
+			apt update && sudo apt upgrade
+			apt install -y task-xfce-desktop
+			apt-get install -y virtualbox-guest-x11
+			apt-get install -y firefox-esr thunderbird
+			reboot	
+		EOF
+	end
+
+	config.vm.define "hochepot" do |hochepot|
+		hochepot.vm.box = "debian/bookworm64"
+		hochepot.vm.provider :virtualbox do |vb|
+  			vb.gui = true
+		end
+		
+		hochepot.vm.provider "virtualbox" do |v|
+			v.memory = 2048
+		end			
+
+		hochepot.vm.hostname = "hochepot"
+	
+		hochepot.vm.provision "shell", inline: <<-EOF
+			apt update && sudo apt upgrade
+			apt install -y task-xfce-desktop
+			apt-get install -y virtualbox-guest-x11
+			apt-get install -y firefox-esr thunderbird
+			reboot	
+		EOF
+	end
+
+end
