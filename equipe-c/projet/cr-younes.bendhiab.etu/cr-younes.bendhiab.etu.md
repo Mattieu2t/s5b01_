@@ -54,3 +54,7 @@
 - Mise en place NFS, problème de montage sur le home directory. On montera donc le /home dans un autre répértoire (du type "nfs_home").
 
 ## 14-12-2023
+
+- LDAP/NFS mis en place, un seul problème, les utilisateurs ne peuvent pas s'authntifier, le serveur NFS ne laisse pas les utilisateurs distant à créer leur home directory
+
+## 15-12-2023
