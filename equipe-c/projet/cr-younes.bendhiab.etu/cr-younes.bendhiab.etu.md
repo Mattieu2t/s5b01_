@@ -55,6 +55,10 @@
 
 ## 14-12-2023
 
-- LDAP/NFS mis en place, un seul problème, les utilisateurs ne peuvent pas s'authntifier, le serveur NFS ne laisse pas les utilisateurs distant à créer leur home directory
+- LDAP/NFS mis en place, un seul problème, les utilisateurs ne peuvent pas s'authentifier, le serveur NFS ne laisse pas les utilisateurs distant à créer leur home directory
 
 ## 15-12-2023
+
+- Problème "réglé" pour NFS, l'utilisateur devra être créé depuis le serveur NFS.
+- Installation du client LDAP/NFS maintenant automatique.
+- Mise en place d'un utilisateur
