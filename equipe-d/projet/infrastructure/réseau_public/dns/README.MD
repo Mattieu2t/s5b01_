@@ -2,6 +2,12 @@
 
 Détails sur la configuration DNS pour le domain "techtonic.iut".
 
+Mail : mail.techtonic.iut
+
+Dns : ns.techtonic.iut
+
+Web : techtonic.iut
+
 ## Configuration de la clé d'authentification
 
 La configuration commence par la définition d'une clé d'authentification nommée "ma_cle" utilisant l'algorithme HMAC-MD5. Assurez-vous de conserver en lieu sûr la valeur de la clé secrète.
