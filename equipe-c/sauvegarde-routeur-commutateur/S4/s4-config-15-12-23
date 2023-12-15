@@ -1,0 +1,184 @@
+
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname S4
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3589573248
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3589573248
+ revocation-check none
+ rsakeypair TP-self-signed-3589573248
+!
+!
+crypto pki certificate chain TP-self-signed-3589573248
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33353839 35373332 3438301E 170D3933 30333031 30303030 
+  35385A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 35383935 
+  37333234 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100C2C3 C559BD7D A7CDDC2C E85D28F3 F36E85CE 3D975BCF 991B8D45 04C35B3D 
+  B304AEEE 18A2AE64 4467E55E 43F7AE47 EA19BD78 CB581033 5ECBBF16 77BF5426 
+  E1C3CDBE 3CB35EAD E0D3A9C6 D7CC54A2 CF47D6D1 5C9083FA D2EB6E98 9C2B7B52 
+  50570560 9277E31C F16DB947 172EE29E 930B2790 8EF3FE7A 5B302E8E BE2AE263 
+  AC4F0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 142A9F1F 5A434D7F DB43D462 2654C810 5FB329AA 7F301D06 
+  03551D0E 04160414 2A9F1F5A 434D7FDB 43D46226 54C8105F B329AA7F 300D0609 
+  2A864886 F70D0101 05050003 8181008F AC437578 A035C5DC F93145C5 81BD26E5 
+  AC16BE77 3D9715E2 479C8A9A 6D164990 5F205442 35C4E059 4196B1A0 E68D2D9D 
+  D724B9B6 23E006CD F56CB550 5B606078 DCE745A3 9BA5C571 1EBF3770 013A6C22 
+  B4DBF556 141C89CA FC2F2D99 001CF030 07C0C55D 41FCEEC9 063D3F78 7C3FAAAD 
+  CCE9E4D5 128F4069 A5B72AEA 96AF9A
+  	quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/24
+ switchport access vlan 10
+ switchport mode access
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 192.168.4.253 255.255.255.0
+!
+interface Vlan40
+ no ip address
+!
+ip http server
+ip http secure-server
+!
+!
+line con 0
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end
