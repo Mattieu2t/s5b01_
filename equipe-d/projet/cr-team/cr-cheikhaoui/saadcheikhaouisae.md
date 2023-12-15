@@ -30,3 +30,4 @@ subtitle: Equipe D - TechTonic
 - Mise en place de la mise a jour automatiquement de zone bind9 avec dhcp
 - Sauvegarde des configs routeurs avec tftp
 - Mise en place de service Mail
+- Fin de la mise en place du serveur Mail fonctionnel
