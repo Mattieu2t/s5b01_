@@ -40,3 +40,11 @@ Pour restaurer les données :
 - `sudo slapadd -c -b dc=syssko,dc=com -F /etc/ldap/slapd.d -l syssko.ldif` afin de restaurer la base avec la sauvegarde
 
 - `sudo tar -xvf syssko_ldap.tar /etc/ldap ` afin de restaurer la configuration
+
+## Connexion à un utilisateur depuis un poste 
+
+Pour se connecter à un utilisateur depuis un poste :
+
+- `su - {nom d'utilisateur}`
+
+Un répertoire /home/*nom_de_l'utilisateur* sera présent.
