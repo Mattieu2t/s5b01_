@@ -29,31 +29,31 @@ Suivez attentivement les étapes du script. Au début, on vous demandera un mot 
 
 Au début on nous demande un mot de passe root. Laissez les camps vide. 
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/1.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/1.png "wizard ldap")
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/2.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/2.png "wizard ldap")
 
 Indiquez le nom de domaine de votre organisation, par exemple, **techtonic.iut**.
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/3.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/3.png "wizard ldap")
 
 Spécifiez le nom de votre organisation, ici **techtonic**.
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/4.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/4.png "wizard ldap")
 
  Entrez le mot de passe root pour le serveur LDAP.
  
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/5.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/5.png"wizard ldap")
 
 Suivez ensuite les étapes comme illustré ci-dessous :
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/6.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/6.png "wizard ldap")
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/7.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/7.png "wizard ldap")
 
 Ajoutez les utilisateurs : 
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/8.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/8.png "wizard ldap")
 
 Vous avez maintenant installé le serveur LDAP avec succès !
 
@@ -71,13 +71,13 @@ sudo apt install libnss-ldap libpam-ldap ldap-utils
 ```
 Configurez l'URI de votre serveur LDAP. Le format du serveur est également affiché dans l'image suivante. Ensuite, appuyez sur la touche Entrée pour passer à la configuration suivante.
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/9.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/9.png "wizard ldap")
 
 Vous allez maintenant définir un nom distinct pour la base de recherche LDAP. Un exemple est présenté dans l'image ci-dessous. Ensuite, appuyez sur la touche Entrée pour passer à l'écran suivant.
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/10.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/10.png "wizard ldap")
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/11.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/11.png "wizard ldap")
 
 Ensuite, configurez votre système Debian 10 pour utiliser LDAP pour l'authentification. Pour ce faire, mettez à jour les configurations PAM en exécutant la commande suivante :
 ```
@@ -86,7 +86,7 @@ sudo pam-auth-update
 
 Cette commande affichera une boîte de dialogue sur votre écran à partir de laquelle vous pourrez sélectionner les profils souhaités que vous souhaitez activer.
 
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/12.png "wizard ldap")
+![Texte alternatif](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/12.png "wizard ldap")
 
 Redémarez le service : 
 
@@ -101,6 +101,6 @@ Pour vous connecter à un utilisateur depuis un poste client, exécutez la comma
 ```
 su - {nom de l'utilisateur}
 ```
-![Texte alternatif](/equipe-d/projet/Vagrant/Ldap/img/13.png "wizard ldap")
+![Texte alternatifL](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/13.png "wizard ldap")
 
 Vous êtes maintenant connecté à votre utilisateur présent sur le serveur LDAP ! Vous pouvez constater que l'utilisateur possède bien un répertoire **/home/user** lors de la création de la session.
