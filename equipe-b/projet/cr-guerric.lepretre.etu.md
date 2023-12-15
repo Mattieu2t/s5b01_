@@ -18,3 +18,7 @@
  - fix des mauvaises IPs dans les configuration
  - écriture de la documentation pour le Server de Mail
  - rectification de la doc pour le server web	
+
+# jeudi 14 décembre
+ - avancement dans la création des stations de travails
+ - écriture de la doc pour les stations de travails
