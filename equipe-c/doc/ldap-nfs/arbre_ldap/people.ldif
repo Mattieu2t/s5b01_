@@ -1,0 +1,71 @@
+dn: uid=younes.bendhiab,ou=admin,ou=People,dc=capsule,dc=iut
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+givenName: Younes
+sn: Ben Dhiab
+cn: Younes Ben Dhiab
+uid: younes.bendhiab
+mail: younes.bendhiab@capsule.iut
+uidNumber: 10000
+gidNumber: 10000
+userPassword: ybendhiab
+homeDirectory: /home/nfs_home/admin/younes.bendhiab
+loginShell: /bin/bash
+departmentNumber: admin
+
+dn: uid=benoit.dessaint,ou=admin,ou=People,dc=capsule,dc=iut
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+givenName: Benoit
+sn: Dessaint
+cn: Benoit Dessaint
+uid: benoit.dessaint
+mail: benoit.dessaint@capsule.iut
+uidNumber: 10001
+gidNumber: 10000
+userPassword: bdessaint
+homeDirectory: /home/nfs_home/admin/benoit.dessaint
+loginShell: /bin/bash
+departmentNumber: admin
+
+dn: uid=cedric.larsonnier,ou=info,ou=People,dc=capsule,dc=iut
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+givenName: Cedric
+sn: Larsonnier
+cn: Cedric Larsonnier
+uid: cedric.larsonnier
+mail: cedric.larsonnier@capsule.iut
+uidNumber: 10002
+gidNumber: 10001
+userPassword: clarsonnier
+homeDirectory: /home/nfs_home/info/cedric.larsonnier
+loginShell: /bin/bash
+departmentNumber: info
+
+dn: uid=jugurtha.saada,ou=prod,ou=People,dc=capsule,dc=iut
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+givenName: Jugurtha
+sn: Saada
+cn: Jugurtha Saada
+uid: jugurtha.saada
+mail: jugurtha.saada@capsule.iut
+uidNumber: 10003
+gidNumber: 10002
+userPassword: jsaada
+homeDirectory: /home/nfs_home/prod/jugurtha.saada
+loginShell: /bin/bash
+departmentNumber: prod
