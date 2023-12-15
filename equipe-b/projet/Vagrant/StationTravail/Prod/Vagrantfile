@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
 		end			
 
 		carbonadeFlamande.vm.hostname = "carbonadeFlamande"
+		carbonadeFlamande.vm.network "public_network", bridge: "enp1s2"
 	
 		carbonadeFlamande.vm.provision "shell", inline: <<-EOF
 			apt update && sudo apt upgrade
@@ -32,6 +33,7 @@ Vagrant.configure("2") do |config|
 		end			
 
 		moulesFrites.vm.hostname = "moulesFrites"
+		moulesFrites.vm.network "public_network", bridge: "enp1s2"
 	
 		moulesFrites.vm.provision "shell", inline: <<-EOF
 			apt update && sudo apt upgrade

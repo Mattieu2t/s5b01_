@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
 		end			
 
 		fricadelle.vm.hostname = "fricadelle"
+		fricadelle.vm.network "public_network", bridge: "enp1s2"
 	
 		fricadelle.vm.provision "shell", inline: <<-EOF
 			apt update && sudo apt upgrade
@@ -32,6 +33,7 @@ Vagrant.configure("2") do |config|
 		end			
 
 		hochepot.vm.hostname = "hochepot"
+		hochepot.vm.network "public_network", bridge: "enp1s2"
 	
 		hochepot.vm.provision "shell", inline: <<-EOF
 			apt update && sudo apt upgrade
