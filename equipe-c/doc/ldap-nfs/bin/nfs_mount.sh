@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NFS_IP=192.168.60.55
+NFS_IP=192.168.21.249
 
 apt install -y nfs-common
 mkdir /home/nfs_home
