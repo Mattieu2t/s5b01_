@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-LDAP_IP="192.168.60.52"
+LDAP_IP="192.168.21.253"
 DN="dc=capsule,dc=iut"
 
 apt install -y debconf-utils
