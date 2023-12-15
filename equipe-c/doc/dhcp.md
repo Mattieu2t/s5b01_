@@ -2,9 +2,9 @@
 
 ## 1. Introduction 
 
-Mise en place d'un service DHCP a l'aide de vagrant et du paquet isc-dhcp-server.  
+Mise en place d'un service DHCP à l'aide de vagrant et du paquet isc-dhcp-server.  
 Le serveur DHCP donne des adresses IP aux machines sur le réseau en fonction du sous réseau sur lequel elles se situent.  
-Grace a vagrant le serveur DHCP ce créer rapidement avec ça configuration déjà implémenté.
+Grâce a vagrant, le serveur DHCP se créé rapidement avec sa configuration déjà implémentée.
 
 ## 2. Pré-requis  
 
@@ -14,15 +14,15 @@ Grace a vagrant le serveur DHCP ce créer rapidement avec ça configuration déj
 ## 3. Instalation
 
 Connectez vous sur une machine `douglasXX`. (nom et mdp : `cisco` )  
-Creer un dossier 'dhcp' dans le dossier courant, ce dossier vas contenir tout les fichier d'installation du serveur DHCP :  
+Créez un dossier 'dhcp' dans le dossier courant, ce dossier va contenir tous les fichiers d'installation du serveur DHCP :  
 
     cisco@douglasXX:~$ mkdir dhcp
 
-Maintenant creez un fichier `Vagrantfile` dans le dossier dhcp a l'aide de cette commande : 
+Maintenant créez un fichier `Vagrantfile` dans le dossier dhcp à l'aide de cette commande : 
 
     cisco@douglasXX:~/dhcp$ vagrant init
 
-Le fichier Vagrantfile est le fichier le plus important, grace a lui nous allons créer une machine virtuelle ou nous allons ajouté toute les configurations nécessaire a l'installation du serveur DHCP.
+Le fichier Vagrantfile est le fichier le plus important, grace a lui nous allons créer une machine virtuelle dans laquelle nous allons ajouter toutes les configurations nécessaires à l'installation du serveur DHCP.
 
 Voici la configuration du Vagrantfile pour créer le serveur DHCP :
 
@@ -45,26 +45,26 @@ end
 ```
 
 IP de la machine : 192.168.21.250/24  
-Dans cette config vagrant nous retrouverons les fichiers `dhcpd.conf` et `isc-dhcp-server` que nous allons transférer dans le dossier `/tmp`, sur la machine DHCP.  
-Ensuite nous allons lancer un SHELL afin de mettre a jour la machine, déplacer les fichiers de configuartion de DHCP et changer les route par defaut. 
+Dans cette config vagrant nous retrouvons les fichiers `dhcpd.conf` et `isc-dhcp-server` que nous allons transférer dans le dossier `/tmp`, sur la machine DHCP.  
+Ensuite nous allons lancer un SHELL afin de mettre à jour la machine, déplacer les fichiers de configuartion de DHCP et changer les routes par defaut. 
 
-Pour avoir la configuration final du Vagrantfile vous la retrouveré [ici](dhcp-nfs/Vagrantfile)
+Pour avoir la configuration finale du Vagrantfile vous la retrouverez [ici](dhcp-nfs/Vagrantfile)
 
 ## Configuration 
 
 Pour configurer le serveur DHCP les principaux fichiers à modifier sont _/etc/dhcp/dhcpd.conf_ et _/etc/default/isc-dhcp-server_
 
-Il faut creer le dossier `config` avec les fichiers de configuration de dhcp afin d'utiliser ces fichiers dans le Vagrantfile :
+Il faut créer le dossier `config` avec les fichiers de configuration de dhcp afin d'utiliser ces fichiers dans le Vagrantfile :
 
     cisco@douglasXX:~/dhcp$ mkdir config
     cisco@douglasXX:~/dhcp$ touch config/dhcpd.conf
     cisco@douglasXX:~/dhcp$ touch config/isc-dhcp-server
 
-Vous avez juste a modifier les fichier dhcpd.conf et isc-dhcp-server :  
+Vous avez juste a modifier les fichiers dhcpd.conf et isc-dhcp-server :  
 
 Le fichier dhcpd.conf contient les informations de sous réseau pour l'attribution des machines.
 
-La mise en place d'un `pool` d'adresse d'un sous réseau s'effectue comme ceci : 
+La mise en place d'un `pool` d'adresses d'un sous réseau s'effectue comme ceci : 
 
 ```
 subnet 192.168.21.0 netmask 255.255.255.0 {
