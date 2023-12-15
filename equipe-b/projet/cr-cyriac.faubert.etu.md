@@ -18,7 +18,7 @@
  - Mise en forme des documentations
  - Mise en place de la machine IPTables
  - Routage sur les R1 et R2
- - On a cassé Douglas (plus d'espace, plus de réseau après reboot, merci Vagrant)
+ - On a cassé Douglas09 (plus d'espace, plus de réseau après reboot, merci Vagrant)
 
 # Notes :
  - Utiliser "Squid" pour le proxy pour les machines et l'accès à internet
