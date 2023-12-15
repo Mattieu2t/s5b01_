@@ -70,3 +70,10 @@
 - Aide LDAP 
 - Mise en place ACL sur le Vlan pour empêcher accès à internet pour le réseau de production
 - Mise en place NFS, LDAP , client LDAP sur l'infra (avec Younes)
+
+## Vendredi 15 Décembre 
+
+- Mise en place des clients
+- Nettoyage des machines
+- Derniers tests
+- Réglages de bugs
