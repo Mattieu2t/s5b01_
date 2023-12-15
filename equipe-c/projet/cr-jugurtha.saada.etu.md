@@ -3,12 +3,7 @@ title: SAÉ 5B.01 - Saada Jugurtha
 subtitle: Equipe C - Capsule Corp.
 
 ---
-
-# <center>Semaine 39 (25/09 au 29/09) :</center>
-
-- Rien 
-
-# <center>Semaine 41 (09/10 au 13/10) :</center>
+# <center>Semaine 46 (13/11 au 17/11) :</center>
 
 ## Schématisation sur Packet Tracer
 
@@ -38,10 +33,6 @@ subtitle: Equipe C - Capsule Corp.
 | `FastEthernet 3`   | vlan3 | 192.168.1.2 /24   |
 | `FastEthernet 4`   | WLAN | 10.10.10.13 /29 |
 
-# <center>Semaine 46 (13/11 au 17/11) :</center>
-
-- Rien 
-
 # <center>Semaine 48 (27/11 au 01/12) :</center>
 
 Lundi:
@@ -64,18 +55,8 @@ Vendredi:
 - Documentation de toute la semaine
 - Backup des routeurs, switchs et machine vagrant (tftp)
 
-### Services :
-| **Nom**  | **Machine**  | **IP /Masque** |
-|----------------|-------------|----------------|
-| `DHCP`   | douglas14 - vagrant  | 192.168.21.250 /24   |
-| `DNS`   | douglas16 - vagrant | 192.168.4.2 /24 & 10.10.10.10 /29   |
-| `Web`   | douglas16 - vagrant | 192.168.4.2 /24 & 10.10.10.10 /29   |
-
 ### Schématiation sur Packet Tracer
 ![image](https://cdn.discordapp.com/attachments/687337171434078244/1180099311028142140/Capture_decran_2023-12-01_a_11.51.53.png?ex=657c3020&is=6569bb20&hm=535173918b8d67cb489b3b51b2c34d819f04a839a94bd9628a7913126ef07dcc&)
-
-### Etat de la baie :
-![image](https://cdn.discordapp.com/attachments/687337171434078244/1180096671867224225/IMG_9139.jpg?ex=657c2dab&is=6569b8ab&hm=67a835fd2d859145a21db3f46c9a93cef09cdda5cb2a8c7829676f75e36b51b1&)
 
 # <center>Semaine 50 (11/12 au 15/12) :</center>
 
@@ -95,16 +76,17 @@ Mercredi:
 
 Jeudi:
 - Tentative de mise en place d'un pare feu avec pfsense (annulé)
-- Mise en place du proxy web pour le service production avec nginx :
+- Mise en place du proxy web pour le service production avec squid :
 On voit ici que le curl passe bien par le proxy en 192.168.23.10 
 avant d'aller sur internet depuis un pc prod
-![image](https://media.discordapp.net/attachments/687337171434078244/1184876890943651911/Capture_du_2023-12-14_15-00-23.png)
+![image](https://cdn.discordapp.com/attachments/687337171434078244/1185195267092385832/Capture_du_2023-12-14_15-00-23.png)
 
 - Filtrage des packets des services info et admin vers production : 
 On voit que les ping depuis Info vers Production sont bloqués par le routeur
 ![image](https://media.discordapp.net/attachments/687337171434078244/1184876890708774932/unnamed.png)
 
 Vendredi: 
-
-### Etat de la baie :
-![image](https://cdn.discordapp.com/attachments/687337171434078244/1184875424413663282/IMG_9249.jpg)
+- Test d'envoi de mails réussi
+- Procèdure de la mise en place du serveur mail & web
+- Documentation de toute la semaine
+- Backup des routeurs, switchs, raspberry et machine vagrant (tftp)
