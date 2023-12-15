@@ -1,6 +1,6 @@
 zone "syssko.iut" {
   type slave;
-  masters { 192.168.60.10; };
+  masters { 192.168.60.11; };
   file "db.syssko.iut";
 };
 

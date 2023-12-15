@@ -17,8 +17,8 @@ $TTL 86400
 
 client IN A 192.168.60.100
 
-ns IN A 192.168.60.10
-ns2 IN A 192.168.60.11
+ns IN A 192.168.60.11
+ns2 IN A 192.168.60.12
 
 services IN A 192.168.60.30
 www IN CNAME services
@@ -27,4 +27,4 @@ mx1 IN A 192.168.60.12
 mx2 IN A 192.168.60.13
 
 
-resolve IN A 192.168.60.20
+resolve IN A 10.10.10.25

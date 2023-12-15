@@ -6,5 +6,20 @@ zone "syssko.iut" {
 };
 zone "60.168.192.in-addr.arpa" {
     type master;
-    file "/etc/bind/db.192.168.60.in-addr.arpa";
+    file "/etc/bind/db/db.192.168.60.in-addr.arpa";
+};
+
+zone "70.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db/db.192.168.60.in-addr.arpa";
+};
+
+zone "80.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db/db.192.168.60.in-addr.arpa";
+};
+
+zone "10.10.10.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db/db.192.168.60.in-addr.arpa";
 };
