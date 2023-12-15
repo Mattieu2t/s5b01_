@@ -3,7 +3,9 @@
 Détails sur la configuration Mail.
 
 pour les utilisateurs finaux: mail.techtonic.iut/rainloop
+
 pour les administrateurs: mail.techtonic.iut/postfixadmin/ (creation de boites mails ici)
+
 pour configurer postfixadmin: mail.techtonic.iut/postfixadmin/?admin
 
 ## Mise en place du protocole SMTP avec Postfix.
