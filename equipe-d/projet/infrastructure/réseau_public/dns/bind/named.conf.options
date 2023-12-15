@@ -3,6 +3,5 @@ options {
         forwarders { 10.10.10.3; 10.10.10.2; };
         listen-on-v6 { any; };
 	recursion yes;
-	allow-recursion { 127.0.0.1; };
 	dnssec-validation yes;
 };
