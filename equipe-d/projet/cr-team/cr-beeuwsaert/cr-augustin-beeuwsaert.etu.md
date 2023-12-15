@@ -69,4 +69,14 @@
 ### 13/12/23 :
 
 1. Mise en place de la documentation pour ldap/srv web/dns/nfs
+
+
+### 14/12/23 :
+
+1. Création des groupe ldap et mise en commun avec le srv mail
+
+
+### 15/12/23 :
+
+1. Refonte du git avec toute la documentation 
  
