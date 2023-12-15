@@ -97,3 +97,24 @@ objectClass: organizationalPerson
 objectClass: inetOrgPerson
 gidNumber: 1005
 homeDirectory: /home/admin/martin.rigeaux.etu
+
+
+dn: uid=saad.cheikhaoui.etu,ou=users,ou=admin,dc=univ-lille,dc=fr
+uid: saad.cheikhaoui.etu
+cn: Cheikhaoui Saad
+gecos: Martin Cheikhaoui 
+givenName: Saad
+sn: Cheikhaoui
+uidNumber: 10001
+mail: saad.cheikhaoui.etu@techtonic.iut
+employeeNumber: 42133304
+employeeType: 100915772
+departmentNumber: {UAI:0597239Y}3BFQDV-123
+objectClass: top
+objectClass: person
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+gidNumber: 1005
+homeDirectory: /home/admin/saad.cheikhaoui.etu
