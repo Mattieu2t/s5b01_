@@ -112,3 +112,22 @@ line con 0
 line vty 5 15
 !
 end
+
+
+1. **`vlan 10`** : Crée un VLAN avec l'ID 10.
+
+2. **`name public`** : Donne le nom "public" au VLAN 10.
+
+3. **`interface FastEthernet0/1`** : Configure les paramètres pour l'interface FastEthernet0/1.
+
+4. **`switchport access vlan 10`** : Configure l'interface FastEthernet0/1 pour utiliser le VLAN 10 en mode d'accès.
+
+5. **`interface FastEthernet0/24`** : Configure les paramètres pour l'interface FastEthernet0/24.
+
+6. **`switchport trunk allowed vlan 1-5,10-40`** : Autorise les VLAN 1 à 5 et 10 à 40 sur l'interface en mode trunk.
+
+7. **`switchport mode trunk`** : Configure l'interface en mode trunk.
+
+8. **`interface Vlan10`** : Configure les paramètres pour l'interface Vlan10.
+
+9. **`ip address 10.10.10.25 255.255.255.248`** : Attribue une adresse IP statique (10.10.10.25 avec un masque de sous-réseau de 255.255.255.248) à l'interface Vlan10.
