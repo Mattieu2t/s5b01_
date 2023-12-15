@@ -62,3 +62,11 @@
 
 - Aide FAI pour faire commiquer nos DNS (résolution du problème + tests)
 - Lecture d'une documentation sur la sécurisation du DNS avec BIND et mise en place de certains conseils.
+
+## Jeudi 14 Décemnbre
+
+- Aide FAI pour qu'il puisse contacter le DNS des autres entreprises et contacter leurs machines. (Pas fonctionné)
+- Mise en place proxy Squid
+- Aide LDAP 
+- Mise en place ACL sur le Vlan pour empêcher accès à internet pour le réseau de production
+- Mise en place NFS, LDAP , client LDAP sur l'infra (avec Younes)
