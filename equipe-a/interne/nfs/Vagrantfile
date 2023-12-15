@@ -1,0 +1,20 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/bookworm64"
+  config.vm.network "public_network", ip: "172.16.50.5", netmask: "255.255.255.0", bridge: "enp1s2"
+
+  config.vm.provision "file", source: "dhcpd.conf", destination: "/tmp/"
+  config.vm.provision "file", source: "isc-dhcp-server", destination: "/tmp/"
+  config.vm.provision "file", source: "exports", destination: "/tmp/"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y isc-dhcp-server nfs-kernel-server
+    mv /tmp/dhcpd.conf /etc/dhcp/
+    mv /tmp/isc-dhcp-server /etc/default/
+    systemctl restart isc-dhcp-server
+    mv /tmp/exports /etc/exports
+    modprobe nfs
+    exportfs -a
+    systemctl restart nfs-server
+  SHELL
+end

@@ -21,8 +21,8 @@ mandarine@   IN      NS      ns2.mandarine.iut.
 ; Définition des IP des NS
 3     IN      PTR     ns1.iut
 2     IN      PTR     ns2.iut
-1     IN      PTR     ns1.capsule.iut
-1     IN      PTR     ns2.capsule.iut
+10     IN      PTR     ns1.capsule.iut
+10     IN      PTR     ns2.capsule.iut
 1     IN      PTR     ns1.techtonic.iut
 1     IN      PTR     ns2.techtonic.iut
 1     IN      PTR     ns1.syssko.iut

@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/config":{"guestpath":"/home/vagrant/config","hostpath":"/home/cisco/rtr_fai/config","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/cisco/rtr_fai/douglas01","disabled":false,"__vagrantfile":true}}}

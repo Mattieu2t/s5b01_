@@ -22,8 +22,8 @@ mandarine@   IN      NS      ns2.mandarine.iut.
 ; Définition des IP des NS
 ns1     IN      A       10.10.10.3
 ns2     IN      A       10.10.10.2
-ns1.capsule  IN    A     10.10.10.1
-ns2.capsule  IN    A     10.10.10.1
+ns1.capsule  IN    A     10.10.10.10
+ns2.capsule  IN    A     10.10.10.10
 ns1.techtonic  IN    A     10.10.10.1
 ns2.techtonic  IN    A     10.10.10.1
 ns1.syssko  IN    A     10.10.10.1

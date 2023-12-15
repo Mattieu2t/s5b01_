@@ -34,6 +34,9 @@ Vagrant.configure("2") do |config|
         crm resource move cyssko RTR1-FAI
 
         bash /home/vagrant/config/filtrage.sh
+        ip route add 172.16.50.0/24 via 10.10.10.5
+        ip route add 172.16.51.0/24 via 10.10.10.5
+        echo "nameserver 10.10.10.3 \nnameserver 10.10.10.2" > /etc/resolv.conf
       SHELL
     end
     
@@ -55,6 +58,7 @@ Vagrant.configure("2") do |config|
           ufw allow 22 comment SSH_LOCAL
           ufw allow 53 comment DNS
           echo y|ufw enable
+          echo "nameserver 10.10.10.3 \nnameserver 10.10.10.2" > /etc/resolv.conf
       SHELL
   end
 
