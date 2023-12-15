@@ -71,7 +71,3 @@ Pour vérifier que le partage est fonctionel :
 ```
 $ exportfs
 ```
-
-Vous avez réussie votre partage nfs !
-    
-
