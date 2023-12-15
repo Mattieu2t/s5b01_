@@ -1,6 +1,6 @@
 # Rapport journalier
 
-## Semaine 41
+## Semaine 48
 
 ### 27/11/23 :
 
@@ -32,6 +32,8 @@
 1. Lecture de la documentation pour l'installation d'un serveur mail.
 2. Début de l'installation du serveur web mais repoussé car trop complexe
 
+## Semaine 50
+
 
 ### 11/12/23 :
 
@@ -58,3 +60,8 @@ J'ai eu différents soucis:
 - J'avais des problèmes de routages et de nattages avec pfsense. J'ai analysé les paquets sur pfsense et j'ai remarqué que les paquets sortaient bien du parfeu, mais avec une ip privé donc les paquets n'était pas nattés ne revenait pas au parefeu. J'ai donc fini par installer IPFire pour résoudre le problème.
 
 - J'ai appliqué une rules sur IPfire mais le paquet n'est pas reject j'ai essayé fait plusieurs tests, mais les paquets n'était pas reject. Mais grâce à un ip route et sur Ipfire, je vois bien que les paquets passent par le firewall. Si je n'arrive pas résoudre ce problème demain, j'utiliserais simplement un machine linux pour faire office de parefeu grâce à iptables.
+
+### 15/12/23 :
+
+- Le firewall fonctionne et bloque l'extérieur vers l'intérieur. Le réseau peut faire des requètes web que à travers le proxy.
+- Le proxy fonctionne aussi.
