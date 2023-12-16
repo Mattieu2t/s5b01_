@@ -7,11 +7,11 @@ capsule.iut. IN SOA capsule.iut. admin.capsule.iut.(
 1H ) ; Cache TTL
 
 @     IN   NS  capsule.iut.
+@     IN   A   192.168.4.5
+ns    IN   A   192.168.4.2
+mail  IN   A   192.168.4.5
+mail  IN   A   10.10.10.11
 
-@     IN   A   192.168.4.2
-@     IN   A   10.10.10.10
-
-mail  IN   A   192.168.4.2
-mail  IN   A   10.10.10.10
+proxy IN   A   192.168.23.10
 
 @     IN   MX  10 mail.capsule.iut.
