@@ -27,8 +27,6 @@ ou: prod
 description: Utilisateurs Prod
 
 dn: cn=admin,ou=Groups,dc=capsule,dc=iut
-#objectClass: groupOfURLs
-#objectClass: groupOfUniqueNames
 objectClass: top
 objectClass: posixGroup
 cn: admin
@@ -36,30 +34,19 @@ gidNumber: 10000
 memberUid: younes.bendhiab
 memberUid: benoit.dessaint
 description: Groupes Admin
-#uniqueMember: uid=younes.bendhiab,ou=admin,ou=People,dc=capsule,dc=iut
-#uniqueMember: uid=benoit.dessaint,ou=admin,ou=People,dc=capsule,dc=iut
-#memberURL: ldap:///ou=admin,ou=People,dc=capsule,dc=iut??sub?(departmentNumber=admin)
 
 dn: cn=info,ou=Groups,dc=capsule,dc=iut
-#objectClass: groupOfURLs
-#objectClass: groupOfUniqueNames
 objectClass: top
 objectClass: posixGroup
 cn: info
 gidNumber: 10001
 memberUid: cedric.larsonnier
 description: Groupes Info
-#uniqueMember: uid=cedric.larsonnier,ou=info,ou=People,dc=capsule,dc=iut
-#memberURL: ldap:///ou=info,ou=People,dc=capsule,dc=iut??sub?(departmentNumber=info)
 
 dn: cn=prod,ou=Groups,dc=capsule,dc=iut
-#objectClass: groupOfURLs
-#objectClass: groupOfUniqueNames
 objectClass: top
 objectClass: posixGroup
 cn: prod
 gidNumber: 10002
 memberUid: jugurtha.saada
 description: Groupes Prod
-#uniqueMember: uid=jugurtha.saada,ou=prod,ou=People,dc=capsule,dc=iut
-#memberURL: ldap:///ou=prod,ou=People,dc=capsule,dc=iut??sub?(departmentNumber=prod)
