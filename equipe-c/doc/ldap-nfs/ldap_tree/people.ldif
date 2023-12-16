@@ -14,7 +14,6 @@ gidNumber: 10000
 userPassword: ybendhiab
 homeDirectory: /home/nfs_home/admin/younes.bendhiab
 loginShell: /bin/bash
-#departmentNumber: admin
 
 dn: uid=benoit.dessaint,ou=admin,ou=People,dc=capsule,dc=iut
 objectClass: top
@@ -32,7 +31,6 @@ gidNumber: 10000
 userPassword: bdessaint
 homeDirectory: /home/nfs_home/admin/benoit.dessaint
 loginShell: /bin/bash
-#departmentNumber: admin
 
 dn: uid=cedric.larsonnier,ou=info,ou=People,dc=capsule,dc=iut
 objectClass: top
@@ -50,7 +48,6 @@ gidNumber: 10001
 userPassword: clarsonnier
 homeDirectory: /home/nfs_home/info/cedric.larsonnier
 loginShell: /bin/bash
-#departmentNumber: info
 
 dn: uid=jugurtha.saada,ou=prod,ou=People,dc=capsule,dc=iut
 objectClass: top
@@ -68,4 +65,3 @@ gidNumber: 10002
 userPassword: jsaada
 homeDirectory: /home/nfs_home/prod/jugurtha.saada
 loginShell: /bin/bash
-#departmentNumber: prod
