@@ -32,7 +32,7 @@ Les fichiers de configuration de bind se situent ici : `/etc/bind/`
 
 Les deux principaux fichiers de configuration sont named.conf.local et named.conf.options
 
-Le fichier `*/etc/bind/named.conf.local` permet de déclarer les zones de domaine que le serveur DNS gère.
+Le fichier `/etc/bind/named.conf.local` permet de déclarer les zones de domaine que le serveur DNS gère.
 
 Voici un exemple de déclaration de zone : 
 ```
