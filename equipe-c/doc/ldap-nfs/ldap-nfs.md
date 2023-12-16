@@ -25,18 +25,18 @@ Voici l'infrastructure LDAP mise en place:
 Plusieurs fichiers sont utilisés lors l'installation du serveur LDAP:
 
 - Le VagrantFile
-  - Changement du hostname en "ldap"
-  - Synchronisation du répertoire courant sur la VM cliente afin de copiers les fichiers:
-  -  ldap_serveur.sh, structure.ldif, people.ldif dans /root/ et resolv.conf dans /etc/
-  - Un bridge est effectué
-  - Création d'une route vers le routeur
+    - Changement du hostname en "ldap"
+    - Synchronisation du répertoire courant sur la VM cliente afin de copiers les fichiers:
+    -  ldap_serveur.sh, structure.ldif, people.ldif dans /root/ et resolv.conf dans /etc/
+    - Un bridge est effectué
+    - Création d'une route vers le routeur
 - bin/ldap_server.sh
-  - Installation manuelle du serveur LDAP.
+    - Installation manuelle du serveur LDAP.
 - ldap_tree/{structure.ldif,people.ldif}
-  - structure.ldif: fichier de création de l'infrastructure LDAP.
-  - people.ldif: création des utilisateurs LDAP.
+    - structure.ldif: fichier de création de l'infrastructure LDAP.
+    - people.ldif: création des utilisateurs LDAP.
 - resolv.conf
-  - Dit à la machine cliente quel DNS utiliser.
+    - Dit à la machine cliente quel DNS utiliser.
 
 Pour commencer, il faut lancer les machines vagrant:
 
@@ -71,24 +71,23 @@ Enter LDAP Password: `<mot_de_passe>`
 L'installation du serveur LDAP est terminé.
 
 > Note: Les fichiers utilisés devront être modifié selon l'infrastructure à mettre en place (ip différentes...). <br>
-> 
 
 ## Protocole de mise en place du serveur NFS
 
 Plusieurs fichiers sont utilisés lors de l'installation du serveur NFS:
 
 - VagrantFile
-  - Changement du hostname en "ldap"
-  - Envoie du fichier bin/client.sh sur la VM dans le /tmp/
-  - Un bridge est effectué
-  - Création d'une route vers le routeur
-  - Installation du service NFS
-  - Modification du fichier /etc/export avec l'ajout d'un 'export' NFS pour le partage du répertoire /home/nfs_home
-  - Copie du fichier resolv.conf dans le dossier /etc/
-  - Execution du fichier /tmp/client.sh
-  - Ajout d'une ligne dans le fichier /etc/pam.d/common-session afin de pouvoir créér le home directory d'un utilisateur dont les différents répértoires y menant
+    - Changement du hostname en "ldap"
+    - Envoie du fichier bin/client.sh sur la VM dans le /tmp/
+    - Un bridge est effectué
+    - Création d'une route vers le routeur
+    - Installation du service NFS
+    - Modification du fichier /etc/export avec l'ajout d'un 'export' NFS pour le partage du répertoire /home/nfs_home
+    - Copie du fichier resolv.conf dans le dossier /etc/
+    - Execution du fichier /tmp/client.sh
+    - Ajout d'une ligne dans le fichier /etc/pam.d/common-session afin de pouvoir créér le home directory d'un utilisateur dont les différents répértoires y menant
 - bin/client.sh
-  - Permet l'installation du client LDAP
+    - Permet l'installation du client LDAP
 
 La vm se créer et se configure automatiquement lors de sa création avec la commande:
 
@@ -103,9 +102,9 @@ L'installation du serveur NFS est terminé.
 Plusieurs fichiers sont utilisés lors de l'installation d'un client LDAP/NFS:
 
 - bin/client.sh
-  - Permet l'installation du client LDAP
+    - Permet l'installation du client LDAP
 - bin/client_nfs_mount.sh
-  - Permet de monter le répértoire /home/nfs_home/ et d’accéder aux fichiers partagés par le serveur NFS.
+    - Permet de monter le répértoire /home/nfs_home/ et d’accéder aux fichiers partagés par le serveur NFS.
 
 Les deux fichiers n'ont qu'à être lancés en mode root sur une machine cliente.
 
