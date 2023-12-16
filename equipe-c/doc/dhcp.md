@@ -95,7 +95,9 @@ ddns-update-style interim;
 
 Ces options permettent d'activer la mise à jour du DNS via le DHCP.
 
-Il faut également modifier nos pool afin de spécifier la zone du serveur DNS a mettre à jour. 
+Il est également nécessaire d'ajouter une clé d'authentification dans ce fichier qui doit être exactement la même que celle du serveur DNS. Ceci permettra d'effectuer une mise à jour des zones de manière sécurisée.
+
+Ensuite, il faut modifier nos pool afin de spécifier la zone du serveur DNS a mettre à jour. 
 
 Voici un exemple : 
 
