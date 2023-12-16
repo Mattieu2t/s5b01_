@@ -118,10 +118,12 @@ Un utilisateur ne peut pas s'authentifier directement faute de droits (on a pas 
 
 Pour créer un utilisateur, l'administrateur doit se rendre sur la machine NFS et s'authentifier avec les différents comptes utilisateurs, par exemple manuellement ou grâce à la commande suivante en mode root:
 
-```su - younes.bendhiab```
+`su - younes.bendhiab`
 
 L'utilisateur "younes.bendhiab" peut maintenant se connecter sur une machine.
 
-Une autre manière afin que cette création de home directory se fasse automatiquement, est l'utilisateur du fichier `bin/auto_su.sh` qui grâce à une liste d'utilisateurs, créés automatiquement tout les home directory de tout les utilisateurs. Ce fichier n'a qu'à être exécuté sur la machine NFS en mode root.
+Une autre manière afin que cette création de home directory se fasse automatiquement, est l'utilisation du fichier `bin/auto_su.sh` qui, grâce à une liste d'utilisateurs, créés automatiquement tout les home directory de tout les utilisateurs. Ce fichier n'a qu'à être exécuté sur la machine NFS en mode root:
+
+`source auto_su.sh`
 
 > Note: Il faudra modifier le fichier bin/auto_su.sh en ajoutant les utilisateurs dans la liste.
