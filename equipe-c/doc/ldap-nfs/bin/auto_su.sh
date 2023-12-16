@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Liste des utilisateurs où mon veut créér un home directory
+# Liste des utilisateurs où l'on veut créer un home directory
 users=("younes.bendhiab" "benoit.dessaint" "jugurtha.saada" "cedric.larsonnier")
 
 users_created=()
