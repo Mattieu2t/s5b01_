@@ -27,5 +27,3 @@ L’objectif de la semaine 50 est donc la finalisation :
     - du Cache-Proxy 
     - du Serveur Mail 
     - de la Configuration des Services
-
-## Bilan Semaine 50
