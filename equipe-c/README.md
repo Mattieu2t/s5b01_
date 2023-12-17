@@ -39,19 +39,6 @@ DNS : capsule.iut
 | `Web`       | Raspberry            | 192.168.4.5 /24 & 10.10.10.11 /29   |
 | `Mail`      | Raspberry            | 192.168.4.5 /24 & 10.10.10.11 /29   |
 
-## Site Web (Apache2)
-![image](https://media.discordapp.net/attachments/687337171434078244/1184872900692557874/Capture_du_2023-12-14_11-20-41.png)
-
-## Mail - Panel de gestion (postfixadmin)
-![image](https://media.discordapp.net/attachments/687337171434078244/1184872899765616660/Capture_du_2023-12-14_11-35-26.png)
-![image](https://media.discordapp.net/attachments/687337171434078244/1184872899509768302/Capture_du_2023-12-14_11-35-46.png)
-
-## Mail - Gestion utilisateur (rainloop)
-
-![image](https://media.discordapp.net/attachments/687337171434078244/1184872900268937296/Capture_du_2023-12-14_11-34-34.png)
-![image](https://media.discordapp.net/attachments/687337171434078244/1184872900025659523/Capture_du_2023-12-14_11-35-01.png)
-
-
 ---
 
 # Intermédiaire du groupe :
