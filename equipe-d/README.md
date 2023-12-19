@@ -3,9 +3,9 @@ title: SAÉ 5B.01 - Équipe D
 subtitle: TechTonic
 
 Membres
- augustin.beeuwsaert.etu
  saad.cheikhaoui.etu
  mohamed.ghazi.etu
+ augustin.beeuwsaert.etu
  martin.rigaux.etu
  
 DNS : techtonic.iut
@@ -13,16 +13,19 @@ DNS : techtonic.iut
 ---
 
 # Notre projet : 
-Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objectif de mettre en place une infrastructure réseau. Pour notre réseau privé.
+Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objectif de mettre en place une infrastructure réseau comprenant 1 réseau public ainsi qu'un réseau privé. Chaque réseau comprend plusieurs services. 
+
+CF : Voir [sujet](../README.md) !
 
 # Les services installés :
 
 - Ldap 
 - Serveur de mail
 - Serveur Web (Apache)
-- Dhcp
-- Dns
-- Nfs 
+- DHCP
+- DNS
+- NFS
+- PROXY 
 
 | Réseau            | Adresse IP        | Masque de Sous-réseau | Nom de la Machine  | Utilité                   |
 |-------------------|-------------------|-----------------------|--------------------|---------------------------|
@@ -35,24 +38,11 @@ Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objecti
 | Privé             | 192.168.12.252    | 255.255.255.0         | Douglas05          | LDAP                      |
 | Privé             | 192.168.12.253    | 255.255.255.0         | Douglas05          | NFS                       |
 | Privé             | 192.168.12.251    | 255.255.255.0         | Douglas05          | Proxy Web                 |
-| Privé             | 192.168.12.240    | 255.255.255.0         | PC1                | Clien LDAP                |
-
-
-
-# Notre organisation pour ce projet : 
-Pour cette première semaine, notre équipe a adopté une approche collaborative où chaque membre travaille sur un pied d'égalité. Les décisions sont prises collectivement après concertation. Chacun a une tâche spécifique pour assurer le bon déroulement du projet.
-Voici le role d'intermédiaire pour chaque semaine : 
-
-- semaine 39 du 25/09 au 29/09 -> saad
-- semaine 41 du 09/10 au 13/10 -> mohamed
-- semaine 46 du 13/11 au 17/11 -> augustin
-- semaine 48 du 27/11 au 01/12 -> martin 
-- semaine 50 du 11/12 au 15/12 -> mohamed
+| Privé             | 192.168.12.240    | 255.255.255.0         | PC1                | Client test                |
 
 
 # Information : 
-Pour ce projet nous allons travailler sur la baie N°3 ainsi que sur le réseaux privé : 10.13.0.0
-
+Pour ce projet nous allons travailler sur la baie N°3 ainsi que sur le réseaux privé : 10.10.10.0
 
 # Question : 
 Procedure d'activiter ? si oui quel niveau ?
@@ -63,7 +53,7 @@ Est ce que le réseaux privé y doit etre dans la tranche 10.13.0.0
 
 # Dépot : 
 
-Chaque service se trouve dans le répertoire à son nom. Dans chaque dépôt, vous trouverez un Vagrantfile avec la documentation associée pour réaliser l'installation du service.
+Chaque service se trouve dans le répertoire à son nom. Dans chaque service, vous trouverez un Vagrantfile avec la documentation associée pour réaliser l'installation du service.
  
 
 # Compte rendu :
