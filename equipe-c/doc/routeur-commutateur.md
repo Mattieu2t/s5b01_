@@ -118,9 +118,9 @@ Exemple :
 Router(config)# interface FastEthernet0
 Router(config-if)#
 ```
-après avoir lancer cette commande :  **"interface FastEthernet0"**, vous avez ceci **"Router(config-if)#"**
+Après avoir lancer cette commande :  **"interface FastEthernet0"**, vous avez ceci **"Router(config-if)#"**
 
-Cela signifie que vous avez accès a l'interface "FastEthenet0"
+Cela signifie que vous avez accès a l'interface "FastEthernet0"
 
 ## Configuration des routeur/commutateur
 Pour la configuration des different routeur/commutateur vous pouvez les retrouver ici : 
