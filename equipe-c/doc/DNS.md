@@ -45,7 +45,7 @@ Ici nous définissons une zone pour le sous domaine "info.capsule.iut" de type m
 Le type master signifie que le serveur DNS est l'autorité principale pour cette zone.
 L'option *file* permet quant à elle de définir l'emplacement du fichier de description de cette zone. 
 
-Le fichier `*/etc/bind/named.conf.options` permet de définir les options du serveur DNS.
+Le fichier `/etc/bind/named.conf.options` permet de définir les options du serveur DNS.
 
 Beaucoup d'options existent pour ce fichier, ici nous allons utiliser les options *forwarders*, *allow-query* et *recursion*
 
