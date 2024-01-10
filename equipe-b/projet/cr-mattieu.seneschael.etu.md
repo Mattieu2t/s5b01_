@@ -14,3 +14,4 @@
 
 # Semaine 02 (8/01 au 12/01)
 - Cablage des routeurs et switch
+- mise à jour des config routeur & switch
