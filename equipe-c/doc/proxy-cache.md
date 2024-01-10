@@ -116,3 +116,11 @@ Il faudra par la suite changer le proxy web des différents utilisateurs en l'aj
 | ![Schéma cache-proxy](images/web.png) | 
 |:--:| 
 | *Changement du proxy à partir du navigateur web* |
+
+
+Il est également possible de modifier la configuration du proxy de la machine cliente en lignes de commande : 
+
+```
+root@client:~$ export http_proxy="http://ip_proxy:port"
+root@client:~$ export https_proxy="http://ip_proxy:port"
+```
