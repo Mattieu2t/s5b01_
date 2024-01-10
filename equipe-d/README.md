@@ -30,8 +30,8 @@ CF : Voir [sujet](../README.md) !
 | Réseau            | Adresse IP        | Masque de Sous-réseau | Nom de la Machine  | Utilité                   |
 |-------------------|-------------------|-----------------------|--------------------|---------------------------|
 | Public            | 10.10.10.18       | 255.255.255.248       | Douglas05          | DNS                       |
-| Public            | 10.10.10.10       | 255.255.255.0         | Douglas05          | Mail                      |
-| Public            | 10.10.10.17       | 255.255.255.249       | Douglas05          | Web                       |
+| Public            | 10.10.10.18       | 255.255.255.0         | Douglas05          | Mail                      |
+| Public            | 10.10.10.18       | 255.255.255.249       | Douglas05          | Web                       |
 | Public            | 10.10.10.19       | 255.255.255.0         | Douglas05          | Firewall                  |
 | Privé             | 192.168.0.1       | 255.255.0.0           | Douglas05          | Firewall                  |
 | Privé             | 192.168.12.254    | 255.255.255.0         | Douglas05          | DHCP                      |
