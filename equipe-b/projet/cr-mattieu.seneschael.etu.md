@@ -11,3 +11,6 @@
 - ajout doc pour les fichiers vagrantfile
 - firewall
 - config routeur et switch avec une doc 
+
+# Semaine 02 (8/01 au 12/01)
+- Cablage des routeurs et switch
