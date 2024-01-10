@@ -256,6 +256,10 @@ ip name-server 10.10.10.2
 
 Le serveur nfs se trouve sur la machine avec l'ip =172.16.50.5= et partage le dossier =/home=.
 
+Pour pouvoir le monter (ce n'est pas encore fait automatiquement dans le /etc/fstab) il faut utiliser la commande =mount -t nfs 172.16.50.5:/home dossier= où dossier est le dossier dans lequel on veut monter le partage nfs.
+
+Attention, seule les machines dans le réseau 172.16.50.0/24.
+
 * TODO LDAP
 
 * TODO Serveur web
