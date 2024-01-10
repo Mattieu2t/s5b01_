@@ -109,7 +109,7 @@ Voici une liste des directives utilisés par défaut et leur utilitées:
 
     Les directives acl et http_access permettent d'autoriser ou d'interdire les connexions HTTP.
 
-Il n'y a aucune spécification sur les restrictions qu'il devrait y avoir pour le proxy, on va donc laisser les paramètres par défaut donnés par Squid.
+Nous avons modifié les règles présentes initialement afin qu'elles correspondent à notre réseau et à nos besoins. Vous pouvez trouver notre configuration dans le fichier [`squid.conf`](proxy/squid.conf) 
 
 Il faudra par la suite changer le proxy web des différents utilisateurs en l'ajoutant sur leur navigateur web:
 
