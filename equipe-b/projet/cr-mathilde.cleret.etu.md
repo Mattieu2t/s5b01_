@@ -138,7 +138,7 @@ Voici le schéma et le câblage final:
 
 Ci-dessous le schéma de notre toute première version du câblage de notre infrastructure:
 
-![](C:\Users\mcler\OneDrive\Documents\SAE 1\PXL_20231010_083717007.jpg)
+![](mathilde.cleret.etu-img/PXL_20231010_083717007.jpg)
 
 ## Services mis en place
 
