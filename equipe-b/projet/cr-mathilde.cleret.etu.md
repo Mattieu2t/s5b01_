@@ -132,9 +132,9 @@ Nos branchements ont été, à plusieurs reprises, enlevés ou modifiés. Nous a
 
 Voici le schéma et le câblage final:
 
-![](C:\Users\mcler\OneDrive\Documents\SAE 1\diagram-reseau.png)
+![](mathilde.cleret.etu-img/diagram-reseau.png)
 
-![](C:\Users\mcler\OneDrive\Documents\SAE 1\cablage_machine.jpg)
+![](mathilde.cleret.etu-img/cablage_machine.jpg)
 
 Ci-dessous le schéma de notre toute première version du câblage de notre infrastructure:
 
@@ -195,7 +195,7 @@ L'annuaire LDAP organise les données selon une structure hiérarchique appelée
 
 Voici l'annuaire que nous avons mis en place lors du projet:
 
-![](C:\Users\mcler\OneDrive\Documents\SAE 1\ldap.drawio.png)
+![](mathilde.cleret.etu-img/ldap.drawio.png)
 
 ### NFS
 
@@ -346,7 +346,7 @@ Le fichier de configuration d'Iptables suivant a été généré par 'iptables-s
 
   *Ci dessous, une représentation du fonctionnement de DHCPv6 lors de l'attribution d'une adresse IPV6.*
 
-  ![exemple DHCPv6 stafeful](C:\Users\mcler\OneDrive\Documents\SAE 1\stateful-dhcpv6.jpg)
+  ![exemple DHCPv6 stafeful](mathilde.cleret.etu-img/stateful-dhcpv6.jpg)
 
   La configuration de DHCPv6 est fortement similaire à la configuration de DHCP. Il s'agit donc de procéder en trois étapes. Pour commencer, il est recommandé d'établir sa table d’adressage (⚠️ il faut indiquer les adresses des appareils en IPV6). Par la suite, il faut configurer le matériel nécessaire (commutateur / switch), pour cela les commandes requises sont semblables à celles pour DHCP en IPv4. De nombreux exemples et documentations sont disponibles sur internet. Une fois ces étapes réalisés, il ne reste plus qu'à vérifier le bon fonctionnement du service. 
 
@@ -410,7 +410,7 @@ La mise en place d'un VPN semble plutôt complexe d'après mes recherches. Voici
 
      *Ci-dessous, un rapide comparatif des différents VPN les plus répandus:*
 
-![](C:\Users\mcler\OneDrive\Documents\SAE 1\vpn-protocols.jpg)
+![](mathilde.cleret.etu-img/vpn-protocols.jpg)
 
 > Quelque que soit le VPN qui sera mis en place, il est recommandé de lire la documentation officiel avant de ce lancer dans la configuration.
 >
