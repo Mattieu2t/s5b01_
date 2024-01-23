@@ -8,3 +8,4 @@
 	sudo apt install -y libnss-ldapd ldap-utils
 	sudo systemctl restart nslcd
 	sudo systemctl restart nscd
+        sudo pam-auth-update
