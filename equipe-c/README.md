@@ -14,6 +14,9 @@ DNS : capsule.iut
 
 # Informations :
 
+Maquettage resaux : 
+
+![image](doc/images/Maquette2.0.png)
 
 # Plages d'adresse IP :
 
@@ -33,11 +36,26 @@ DNS : capsule.iut
 | **Nom**     | **Machine**          | **IP /Masque**                      |
 |-------------|----------------------|-------------------------------------|
 | `DHCP`      | douglas14 - vagrant  | 192.168.21.250 /24                  |
-| `Firewall`  | XXXXXXXXX - vagrant  | XX.XX.XX.XX /XX                     |
+| `Ldap`      | douglas14 - vagrant  | 192.168.21.253 /24                  |
+| `Nfs`       | douglas14 - vagrant  | 192.168.21.249 /24                  |
 | `ProxyWeb`  | douglas14 - vagrant  | 192.168.21.10 /24                   |
 | `DNS`       | douglas16 - vagrant  | 192.168.4.2 /24 & 10.10.10.10 /29   |
 | `Web`       | Raspberry            | 192.168.4.5 /24 & 10.10.10.11 /29   |
 | `Mail`      | Raspberry            | 192.168.4.5 /24 & 10.10.10.11 /29   |
+| `Firewall`  | XXXXXXXXX - vagrant  | XX.XX.XX.XX /XX                     |
+
+
+---
+
+# Documentation :
+
+Commande de base pour les [routeurs/commutateurs](doc/routeur-commutateur.md)  
+Installation du service [DHCP](doc/dhcp.md)  
+Installation du service [DNS](doc/dns.md)  
+Installation du service [proxy-cache](doc/proxy-cache.md)  
+Installation du service [serveur mail](doc/serveur-mail.md)  
+Installation du service [LDAP](doc/ldap-nfs/ldap-nfs.md)
+
 
 ---
 

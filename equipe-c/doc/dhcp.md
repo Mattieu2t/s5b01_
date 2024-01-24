@@ -28,27 +28,27 @@ Voici la configuration du Vagrantfile pour créer le serveur DHCP :
 
 ```sh
 config.vm.define "dhcp" do |dhcp|
-  dhcp.vm.hostname = "dhcp"
-  dhcp.vm.network "public_network",bridge: "enp1s2", ip:"192.168.21.250", netmask: "255.255.255.0"
-  dhcp.vm.provision "file", source: "config/dhcpd.conf",destination: "/tmp/"
-  dhcp.vm.provision "file", source: "config/isc-dhcp-server",destination: "/tmp/"      
-  dhcp.vm.provision "shell", inline: <<-SHELL
-    apt update -y
-    apt install -y isc-dhcp-server
-    cp -f /tmp/dhcpd.conf /etc/dhcp/
-    cp -f /tmp/isc-dhcp-server /etc/default/
-    systemctl restart isc-dhcp-server
-    ip route del default via 10.0.2.2
-    ip route add default via 192.168.21.1 dev eth1
-  SHELL
-end
+      dhcp.vm.hostname = "dhcp"
+      dhcp.vm.network "public_network",bridge: "enp1s2", ip:"192.168.21.250", netmask: "255.255.255.0"
+      dhcp.vm.provision "file", source: "config/dhcp/dhcpd.conf",destination: "/tmp/"
+      dhcp.vm.provision "file", source: "config/dhcp/isc-dhcp-server",destination: "/tmp/"      
+      dhcp.vm.provision "shell", inline: <<-SHELL
+        apt update -y
+        apt install -y isc-dhcp-server
+        cp -f /tmp/dhcpd.conf /etc/dhcp/
+        cp -f /tmp/isc-dhcp-server /etc/default/
+        systemctl restart isc-dhcp-server
+        ip route del default via 10.0.2.2
+        ip route add default via 192.168.21.1 dev eth1
+      SHELL
+    end
 ```
 
 IP de la machine : 192.168.21.250/24  
 Dans cette config vagrant nous retrouvons les fichiers `dhcpd.conf` et `isc-dhcp-server` que nous allons transférer dans le dossier `/tmp`, sur la machine DHCP.  
 Ensuite nous allons lancer un SHELL afin de mettre à jour la machine, déplacer les fichiers de configuartion de DHCP et changer les routes par defaut. 
 
-Pour avoir la configuration finale du Vagrantfile vous la retrouverez [ici](dhcp-nfs/Vagrantfile)
+Pour avoir la configuration finale du Vagrantfile vous la retrouverez [ici](dhcp/Vagrantfile)
 
 ## Configuration 
 
