@@ -143,9 +143,6 @@ Le firewall utilisé est =ufw= avec les règles suivantes :
 | 443 on eth0           | ALLOW FWD | 10.10.10.0/24 on eth1 | # HTTPS_EXT    |
 | 9.9.9.9 53 on eth0    | ALLOW FWD | 10.10.10.3 on eth1    | # DNS_RECURSIF |
 | 9.9.9.9 53 on eth0    | ALLOW FWD | 10.10.10.2 on eth1    | # DNS_RECURSIF |
-| 10.10.10.3 53 on eth1 | ALLOW FWD | 10.10.10.0/24 on eth1 | # DNS          |
-| 0.0.0.0 53 on eth0    | ALLOW FWD | 10.10.10.0/24 on eth1 | # DNS          |
-| 9.9.9.9 53 on eth0    | ALLOW FWD | 10.10.10.0/24 on eth1 | # DNS          |
 
 Il est déployé par un [[file:rtr_fai/config/filtrage.sh][script]] qui se lance à la création de la vm.
 
