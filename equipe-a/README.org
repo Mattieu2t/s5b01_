@@ -7,7 +7,6 @@
   - [[#s1][S1]]
   - [[#s2][S2]]
   - [[#s3][S3]]
-  - [[#s4][S4]]
 - [[#configuration-routeurs][Configuration routeurs]]
   - [[#r1-1][R1]]
   - [[#routeurs-en-vm][Routeurs en vm]]
@@ -15,7 +14,6 @@
   - [[#s1-1][S1]]
   - [[#s2-1][S2]]
   - [[#s3-1][S3]]
-  - [[#s4-1][S4]]
 - [[#nfs][NFS]]
 - [[#ldap][LDAP]]
 - [[#serveur-web][Serveur web]]
@@ -80,15 +78,6 @@ Administration
 | FastEthernet0/1 | R1        | 172.16.51.10 | 255.255.255.0 |
 | FastEthernet0/2 | douglas04 |  172.16.51.2 | 255.255.255.0 |
 
-** S4
-
-DMZ
-
-| port            | host      |           IP | Masque Réseau |
-|-----------------+-----------+--------------+---------------|
-| FastEthernet0/1 | R1        | 172.16.52.10 | 255.255.255.0 |
-
-
 * Configuration routeurs
 
 ** R1
@@ -136,11 +125,9 @@ acces-lists 100 deny ip 10.10.10.0 0.0.0.255 any
 =10.10.10.3= correspond à l'addresse de =NS1=
 =10.10.10.2= correspond à l'addresse de =NS2=
 
-Pas essayer de ping =google.com= depuis =R1=, marche pas ¯\_(ツ)_/¯.
-
 ** Routeurs en vm
 
-=RTR1-FAI= et =RTR2-FAI= sont dans un cluster géré par =corosync=, si jamais =RTR1-FAI= tombe en panne, =RTR2-FAI= prends le relai.
+=RTR1-FAI= et =RTR2-FAI= sont dans un cluster géré par =corosync= ([[file:rtr_fai/config/corosync/corosync.conf][config ici]]), si jamais =RTR1-FAI= tombe en panne, =RTR2-FAI= prends le relai.
 
 *** Firewall
 
@@ -160,6 +147,7 @@ Le firewall utilisé est =ufw= avec les règles suivantes :
 | 0.0.0.0 53 on eth0    | ALLOW FWD | 10.10.10.0/24 on eth1 | # DNS          |
 | 9.9.9.9 53 on eth0    | ALLOW FWD | 10.10.10.0/24 on eth1 | # DNS          |
 
+Il est déployé par un [[file:rtr_fai/config/filtrage.sh][script]] qui se lance à la création de la vm.
 
 * Configuration Switch
 
@@ -230,38 +218,18 @@ ip name-server 10.10.10.3
 ip name-server 10.10.10.2
 #+end_src
 
-** S4
-
- S3 sert aussi de serveur dhcp pour la DMZ (nécessaire ???).
-
-#+begin_src
-ip dhcp excludedaddress 172.16.52.1 172.16.52.20
-ip dhcp excludedaddress 172.16.52.254 172.16.52.254
-ip dhcp pool dmz
-    network 172.16.52.0 255.255.255.0
-    default-router 172.16.52.254
-Interface range FastEthernet0/1 - 2
-    switchport access vlan 30
-    switchport mode access
-
-Interface Vlan30
-    ip address 172.16.52.10 255.255.255.0
-
-ip default-gateway 172.16.52.254
-ip name-server 10.10.10.3
-ip name-server 10.10.10.2
-#+end_src
-
 * NFS
 
 Le serveur nfs se trouve sur la machine avec l'ip =172.16.50.5= et partage le dossier =/home=.
 
 Pour pouvoir le monter (ce n'est pas encore fait automatiquement dans le /etc/fstab) il faut utiliser la commande =mount -t nfs 172.16.50.5:/home dossier= où dossier est le dossier dans lequel on veut monter le partage nfs.
 
-Attention, seule les machines dans le réseau 172.16.50.0/24.
+Attention, seule les machines dans le réseau 172.16.50.0/24 peuvent monter le partage nfs.
 
 * TODO LDAP
 
 * TODO Serveur web
+
+Il faut mettre une machine sur le switch 4 et y mettre le serveur web.
 
 * TODO MAIL
