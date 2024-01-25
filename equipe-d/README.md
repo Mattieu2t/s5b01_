@@ -17,15 +17,15 @@ Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objecti
 
 CF : Voir [sujet](../README.md) !
 
-# Les services installés :
+# Les services installés aisi que les procédures:
 
-- Ldap 
-- Serveur de mail
-- Serveur Web (Apache)
-- DHCP
-- DNS
-- NFS
-- PROXY 
+- [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure.md) 
+- [Serveur de mail](../equipe-d/projet/infrastructure/réseau_public/mail/README.MD)
+- [Serveur Web](../equipe-d/projet/infrastructure/réseau_public/web/README.MD)
+- [DHCP](../equipe-d/projet/infrastructure/réseau_privé/dhcp/README.MD)
+- [DNS](../equipe-d/projet/infrastructure/réseau_public/dns/README.MD)
+- [NFS](../equipe-d/projet/infrastructure/réseau_privé/nfs/README.MD)
+- [PROXY](../equipe-d/projet/infrastructure/réseau_privé/)
 
 | Réseau            | Adresse IP        | Masque de Sous-réseau | Nom de la Machine  | Utilité                   |
 |-------------------|-------------------|-----------------------|--------------------|---------------------------|
@@ -43,17 +43,6 @@ CF : Voir [sujet](../README.md) !
 
 # Information : 
 Pour ce projet nous allons travailler sur la baie N°3 ainsi que sur le réseaux privé : 10.10.10.0
-
-# Question : 
-Procedure d'activiter ? si oui quel niveau ?
-Non pas encore car pas vu en cours -> mais peut y reflechire 
-Est ce que le réseaux priver a accèes a internet ?
-on laisse tout sortir mais pas rentrer 
-Est ce que le réseaux privé y doit etre dans la tranche 10.13.0.0 
-
-# Dépot : 
-
-Chaque service se trouve dans le répertoire à son nom. Dans chaque service, vous trouverez un Vagrantfile avec la documentation associée pour réaliser l'installation du service.
  
 
 # Compte rendu :
