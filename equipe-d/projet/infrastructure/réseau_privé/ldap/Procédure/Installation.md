@@ -1,4 +1,3 @@
-@augustin Beeuwsaert
 
 ### Serveur LDAP
 
