@@ -99,7 +99,7 @@ sudo systemctl restart nscd.service
 Pour vous connecter à un utilisateur depuis un poste client, exécutez la commande suivante :
 
 ```
-su - {nom de l'utilisateur}
+ssh  {nom de l'utilisateur}@localhost
 ```
 ![Texte alternatifL](/equipe-d/projet/infrastructure/réseau_privé/ldap/img/13.png "wizard ldap")
 
