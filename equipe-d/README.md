@@ -19,7 +19,7 @@ CF : Voir [sujet](../README.md) !
 
 # Les services installés aisi que les procédures:
 
-- [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure.md) 
+- [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/) 
 - [Serveur de mail](../equipe-d/projet/infrastructure/réseau_public/mail/README.MD)
 - [Serveur Web](../equipe-d/projet/infrastructure/réseau_public/web/README.MD)
 - [DHCP](../equipe-d/projet/infrastructure/réseau_privé/dhcp/README.MD)
