@@ -1,10 +1,10 @@
 ### Procédure de Suppression d'un Utilisateur LDAP
 
 
-## - [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/) 
-- [Instalation de LDAP ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Installation.md) 
-- [Ajouter un utilisateur ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Add_user.md) 
-- [Modifier un utilisateur  ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Modify_user.md)
+## - [Ldap](../Procédure/) 
+- [Instalation de LDAP ](../Procédure/Installation.md) 
+- [Ajouter un utilisateur ](../Procédure/Add_user.md) 
+- [Modifier un utilisateur  ](../Procédure/Modify_user.md)
 
 # 1. Connexion au Serveur LDAP
 Connectez-vous au serveur LDAP en utilisant la commande suivante :

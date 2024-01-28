@@ -1,9 +1,9 @@
 # Procédure d'Ajout d'un Utilisateur LDAP
 
-## - [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/) 
-- [Instalation de LDAP ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Installation.md) 
-- [Supprimer un utilisateur ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Del_user.md) 
-- [Modifier un utilisateur  ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Modify_user.md)
+## - [Ldap](../Procédure/) 
+- [Instalation de LDAP ](../Procédure/Installation.md) 
+- [Supprimer un utilisateur ](../Procédure/Del_user.md) 
+- [Modifier un utilisateur  ](../Procédure/Modify_user.md)
 
 ## 1. Connexion au Serveur LDAP
 
