@@ -17,7 +17,7 @@ Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objecti
 
 CF : Voir [sujet](../README.md) !
 
-# Les services installés aisi que les procédures:
+# Les services installés ainsi que les procédures:
 
 ## - [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/) 
 - [Instalation de LDAP ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Installation.md) 
