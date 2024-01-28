@@ -1,10 +1,10 @@
 
 ### Serveur LDAP
 
-## - [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/) 
-- [Ajouter un utilisateur ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Add_user.md) 
-- [Supprimer un utilisateur ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Del_user.md) 
-- [Modifier un utilisateur  ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Modify_user.md)
+## - [Ldap](../Procédure/) 
+- [Ajouter un utilisateur ](../Procédure/Add_user.md) 
+- [Supprimer un utilisateur ](../Procédure/Del_user.md) 
+- [Modifier un utilisateur  ](../Procédure/Modify_user.md)
 
 Voici la procédure complète pour l'installation du serveur LDAP ainsi que la configuration du poste client. Suivez attentivement ces étapes pour garantir une mise en place efficace.
 
