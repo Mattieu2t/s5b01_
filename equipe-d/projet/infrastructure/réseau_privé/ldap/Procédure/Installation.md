@@ -2,7 +2,6 @@
 ### Serveur LDAP
 
 ## - [Ldap](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/) 
-- [Instalation de LDAP ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Installation.md) 
 - [Ajouter un utilisateur ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Add_user.md) 
 - [Supprimer un utilisateur ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Del_user.md) 
 - [Modifier un utilisateur  ](../equipe-d/projet/infrastructure/réseau_privé/ldap/Procédure/Modify_user.md)
