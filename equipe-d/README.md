@@ -26,12 +26,42 @@ DNS : techtonic.iut
        - [DHCP](#dhcp)
        - [NFS](#nfs)
        - [Proxy Web](#proxy-web)
-   - [Informations](#informations)
+   - [Informations](#information)
    - [Compte rendu](#compte-rendu)
 
 ## Notre Projet
 
 Dans le cadre du projet de notre entreprise "TechTonic", nous avons pour objectif de mettre en place une infrastructure réseau comprenant 1 réseau public ainsi qu'un réseau privé. Chaque réseau comprend plusieurs services.
+
+### Services
+
+Le réseau privé du service informatique doit héberger a minima :
+
+- un service DHCP pour toutes les machines privées de l'organisation
+- un service LDAP définissant les utilisateurs et groupes des
+  différentes machines de l'organisation
+- un service NFS stockant les données des différentes utilisateurs
+  des machines de l'organisation
+- une station de travail avec au minium les outils suivants
+  installés et configurés de manière cohérente :
+    - navigateur web
+    - outil de gestion des emails
+
+Le réseau privé du service administratif doit héberger a minima deux
+stations de travail avec au minium les outils suivants installés et
+configurés de manière cohérente :
+
+- navigateur web
+- outil de gestion des emails
+
+Chaque organisation doit gérer a minima autant d'utilisateurs que
+d'étudiants dans le groupe.
+
+Tous les utilisateurs doivent être capable de s'échanger des emails, y
+compris d'une organisation à une autre.
+
+Toutes les ordinateurs et services de l'organisation doivent être
+désignés par un nom différent.
 
 **CF :** Voir [sujet](../README.md) !
 
